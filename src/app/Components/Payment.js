@@ -12,7 +12,7 @@ const Payment = () => {
           }}
         />
         {/* flex container */}
-        <div className='flex flex-col md:flex-row mx-auto gap-8 text-center md:text-start w-[430px] h-[824px] md:w-[1350px] md:h-[990px]
+        <div className='flex flex-col md:flex-row mx-auto gap-8 text-center md:text-start w-[430px] h-[824px] md:w-[1728px] md:h-[990px]
         relative z-10'>
             {/* item 1 */}
             <div className='flex flex-col mx-auto md:mx-0 w-[352px] h-[380px] md:w-[600px] md:h-[550px] 

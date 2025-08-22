@@ -12,7 +12,7 @@ const Expertise = () => {
             }}
         />  
         {/* flex container */}
-        <div className='flex flex-col mx-auto w-[430px] h-[824px] md:w-[1350px] md:h-[1456px] 
+        <div className='flex flex-col mx-auto w-[430px] h-[824px] md:w-[1728px] md:h-[1456px] 
         relative z-10'>
             {/* item 1 */}
             <div className='flex flex-col w-[352px] h-[360px] md:w-[631px] md:h-[504px] gap-10 md:ml-[40rem]
