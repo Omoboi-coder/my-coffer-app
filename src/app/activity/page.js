@@ -5,7 +5,7 @@ import Image from 'next/image'
 const activity = () => {
   return (
     <DashboardLayout>
-        <section className='flex flex-row 2xl:mx-auto relative'>
+        <section className='flex flex-col md:flex-row 2xl:mx-auto relative w-full h-full'>
             <div className='hidden flex-col md:w-[185px] md:h-[112px] gap-[24px] mt-8'>
               <div className='flex flex-row h-[36px] gap-1'>
                 <Image
@@ -24,8 +24,8 @@ const activity = () => {
                 <p className='text-[45px] text-white ml-2'>Activity</p>
             </div>
              {/* search div */}
-                <div className='flex flex-row md:absolute right-20 top-20 w-[364px] md:w-[285px] h-[40px] 
-                md:h-[50px] rounded-[12px] text-[12px] text-[#B6B6B6] md:p-4 p-2.5   ml-9 md:ml-0 gap-2 border border-[#353535]'>
+                <div className='flex flex-row md:absolute right-20 top-20 w-[396px] md:w-[285px] h-[40px] 
+                md:h-[50px] rounded-[12px] text-[12px] text-[#B6B6B6] md:p-4 p-2.5 ml-6 md:ml-0 gap-2 border border-[#353535]'>
                 <div className='flex flex-row w-[63px] h-[18px] gap-2 mb-1 md:mb-0'>
                   <Image
                     src="/Images/search-normal.svg"
@@ -37,7 +37,7 @@ const activity = () => {
                  </div>
                 </div>
                 {/* No activity container */}
-                <div className='hidden flex-col absolute top-[15rem] md:left-[18rem] left-[5rem] w-[260px] h-[292px] md:w-[456px] md:h-[496px]'>
+                <div className='flex flex-col absolute top-[15rem] md:left-[18rem] left-[5rem] w-[260px] h-[292px] md:w-[456px] md:h-[496px]'>
                     <Image
                     src="/Images/Mobile banking app with secure payment.svg"
                     alt=''
@@ -47,8 +47,118 @@ const activity = () => {
                     />
                     <p className='text-[16px] md:text-[24px] text-white opacity-80 mx-auto'> You don’t have any Activities</p> 
                 </div>
+                <div className='hidden md:hidden flex-row w-[109px] h-[24px] mt-8 ml-6 text-white'>
+                    <span>24th Nov, 2023</span>
+                </div>
+                   {/* div 4 */}
+                      <div className='hidden flex-col w-[382px] h-[220px] gap-[16px] mt-6 ml-6'>
+                        {/* item 1 */}
+                        <div className='flex flex-row rounded-[8px] py-2 gap-17 bg-[#282828]'>
+                          <div className='flex flex-col w-[167px] h-[52px] space-y-1'>
+                            <p className='ml-3 text-white opacity-80'>11:26 am</p>
+                            <div className=' flex flex-row  ml-3 gap-2 text-[16px] text-white'>
+                            <Image
+                              src="/Images/wallet-money.svg"
+                              alt=''
+                              width={24}
+                              height={24}
+                              className=''
+                              />
+                              <p className='mt-0.5'>Account Funded</p>
+                          </div>  
+                        </div>       
+                      <div className='flex flex-row my-3 mt-3.5 text-[16px] text-white'>
+                       <p>$ 125</p>
+                        </div>
+                        <Image
+                              src="/Images/verify.svg"
+                              alt=''
+                              width={24}
+                              height={24}
+                              className=''
+                              />
+                        </div>
+                          {/* item 2 */}
+                        <div className='flex flex-row rounded-[8px] py-2 gap-17 bg-[#282828]'>
+                          <div className='flex flex-col w-[167px] h-[52px] space-y-1'>
+                            <p className='ml-3 text-white opacity-80'>11:26 am</p>
+                            <div className=' flex flex-row  ml-3 gap-2 text-[16px] text-white'>
+                            <Image
+                              src="/Images/wallet-money.svg"
+                              alt=''
+                              width={24}
+                              height={24}
+                              className=''
+                              />
+                              <p className='mt-0.5'>Account Funded</p>
+                          </div>  
+                        </div>       
+                      <div className='flex flex-row my-3 mt-3.5 text-[16px] text-white'>
+                       <p>$ 125</p>
+                        </div>
+                        <Image
+                              src="/Images/verify.svg"
+                              alt=''
+                              width={24}
+                              height={24}
+                              className=''
+                              />
+                        </div>
+                         {/* item 3 */}
+                        <div className='flex flex-row rounded-[8px] py-2 gap-17 bg-[#282828]'>
+                          <div className='flex flex-col w-[167px] h-[52px] space-y-1'>
+                            <p className='ml-3 text-white opacity-80'>11:26 am</p>
+                            <div className=' flex flex-row  ml-3 gap-2 text-[16px] text-white'>
+                            <Image
+                              src="/Images/wallet-money.svg"
+                              alt=''
+                              width={24}
+                              height={24}
+                              className=''
+                              />
+                              <p className='mt-0.5'>Account Funded</p>
+                          </div>  
+                        </div>       
+                      <div className='flex flex-row my-3 mt-3.5 text-[16px] text-white'>
+                       <p>$ 125</p>
+                        </div>
+                        <Image
+                              src="/Images/verify.svg"
+                              alt=''
+                              width={24}
+                              height={24}
+                              className=''
+                              />
+                        </div>
+                         {/* item 4 */}
+                        <div className='flex flex-row rounded-[8px] py-2 gap-17 bg-[#282828]'>
+                          <div className='flex flex-col w-[167px] h-[52px] space-y-1'>
+                            <p className='ml-3 text-white opacity-80'>11:26 am</p>
+                            <div className=' flex flex-row  ml-3 gap-2 text-[16px] text-white'>
+                            <Image
+                              src="/Images/wallet-money.svg"
+                              alt=''
+                              width={24}
+                              height={24}
+                              className=''
+                              />
+                              <p className='mt-0.5'>Account Funded</p>
+                          </div>  
+                        </div>       
+                      <div className='flex flex-row my-3 mt-3.5 text-[16px] text-white'>
+                       <p>$ 120</p>
+                        </div>
+                        <Image
+                              src="/Images/verify.svg"
+                              alt=''
+                              width={24}
+                              height={24}
+                              className=''
+                              />
+                        </div>
+                      </div>
                     {/*  outer container */}
-                      <div className='flex flex-col absolute top-40 md:w-[990px] md:h-[290px] gap-[12px] mt-5 ml-6 opacity-90'>
+                      <div className='hidden flex-col absolute top-40 md:w-[990px] md:h-[290px] gap-[12px] mt-5 ml-6 opacity-90'>
                         {/* item 1 */}
                         <div className='flex flex-row md:h-[48px] rounded-[8px] gap-30 bg-[#282828]'>
                           <div className=' flex flex-row md:w-[167px] md:h-[24px] my-3 ml-5 gap-2 text-[16px] text-white'>
@@ -165,8 +275,6 @@ const activity = () => {
                           </div>
                         </div>
                       </div>
-
-
         </section>
     </DashboardLayout>
   )

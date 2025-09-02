@@ -200,7 +200,7 @@ const Mobile = () => {
                           </div>
                         </div>
                     </div>
-                    <div className='absolute top-[41rem] right-5.5 w-[382px] h-[100px] rounded-[8px]'>
+                    <div className='absolute top-[41rem] right-5 w-[382px] h-[100px] rounded-[8px]'>
                       <Image
                         src="/Images/Withdraw Fund (1).svg"
                         alt=''
