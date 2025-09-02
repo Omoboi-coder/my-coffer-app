@@ -7,7 +7,7 @@ const Features = () => {
        {/* Custom background image overlay */} 
          <div 
           className="absolute top-[10px] md:left-[1023px] 2xl:left-[51rem] w-72 h-48
-           md:w-[278px] md:h-[269px] 2xl:w-[1400px] border-[1.46px] z-0 opacity-100 bg-contain bg-no-repeat bg-center "
+           md:w-[278px] md:h-[269px] 2xl:w-[1400px] z-0 opacity-100 bg-contain bg-no-repeat bg-center "
           style={{
             backgroundImage: "url('/Images/LooperGroup.svg')"
           }}
@@ -15,13 +15,13 @@ const Features = () => {
          {/* Custom background image overlay */} 
          <div 
           className="absolute top-[450px] md:left-[35px] 2xl:left-[51rem] w-72 h-48
-           md:w-[245px] md:h-[262px] 2xl:w-[1400px] border-[1.37px] z-0 opacity-70 bg-contain bg-no-repeat bg-center "
+           md:w-[245px] md:h-[262px] 2xl:w-[1400px] z-0 opacity-70 bg-contain bg-no-repeat bg-center "
           style={{
             backgroundImage: "url('/Images/Group 9.svg')"
           }}
         />
         {/* flex container */}
-        <div className='flex flex-col w-[430px] h-[1040px] md:w-[1728px] md:h-[758px] mx-auto
+        <div className='flex flex-col w-[430px] h-[1040px] md:w-[1728px] md:h-[615px] mx-auto
         relative text-white z-10'>
             {/* Heading */}
             <h3 className='text-[20px] md:text-[45px] h-[52px] mt-10 md:mt-10 ml-5'>How Payclick Works</h3>

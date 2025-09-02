@@ -110,9 +110,9 @@ const Footer = () => {
         {/* footer */}
         <div className='flex flex-row absolute bottom-1 h-[24px] md:w-[1350px] md:h-[40px] text-white text-[14px]
         md:text-[16px] gap-4 md:gap-16 border-1 border-t-[#4E4E4E] border-x-0 border-b-0'>
-            <p className='pt-2 ml-[2rem]'>&copy; Payclick 2025 All rights reserved.</p>
-            <p className='pt-2'>Privacy Policy</p>
-            <p className='pt-2'>Payclick for Companies</p>
+            <p className='pt-2.5 ml-[2rem]'>&copy; Payclick 2025 All rights reserved.</p>
+            <p className='pt-2.5'>Privacy Policy</p>
+            <p className='pt-2.5'>Payclick for Companies</p>
         </div>
     </div>
 

@@ -5,20 +5,30 @@ const Expertise = () => {
   return (
     <section id='expertise' className='bg-coffer-dark relative overflow-hidden'>
         {/* Custom background image overlay */}
-        <div
+        {/* <div
             className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-50 z-0"
             style={{
                 backgroundImage: "url('/Images/Group (4).svg')"
             }}
-        />  
+        />   */}
+         <div className="absolute z-0 opacity-100"
+          style={{
+          backgroundImage: "url('/Images/Group (4).svg')",
+          backgroundSize: 'contain',    
+          backgroundRepeat: 'no-repeat',   
+          backgroundPosition: 'center',    
+          width: '100%',                   
+          height: '100%'                                                  
+        }}
+      />
         {/* flex container */}
-        <div className='flex flex-col mx-auto w-[430px] h-[1064px] md:w-[1728px] md:h-[1456px] 
+        <div className='flex flex-col mx-auto w-[430px] h-[1064px] md:w-[1728px] md:h-[1206px] 
         relative z-10'>
             {/* item 1 */}
-            <div className='flex flex-col w-[382px] h-[440px] md:w-[631px] md:h-[504px] gap-[36px] md:gap-10 
-            mx-auto md:mx-0 md:ml-[40rem] mt-10 md:mt-15 text-white'>
+            <div className='flex flex-col w-[382px] h-[440px] md:w-[631px] md:h-[504px] gap-[36px] md:gap-5 
+            mx-auto md:mx-0 md:ml-[40rem] mt-10 md:mt-8 text-white'>
                 <h3 className='text-[20px] md:text-[30px]'>Our Expertise</h3>
-                <h2 className='text-[40px] leading-11 mt-10 md:text-[58px] w-[362px] h-[144px] md:w-[540px] md:h-[160px]'>Masters of Precision Payroll Processing</h2>
+                <h2 className='text-[40px] leading-16 mt-10 md:text-[58px] w-[362px] h-[144px] md:w-[540px] md:h-[160px]'>Masters of Precision Payroll Processing</h2>
                 <p className='w-[342px] h-[72px] md:w-[505px] md:h-[64px] text-[16px] md:text-[20px]'>We specialize in the art and science of meticulous payroll management
                      and scheduling of salary payments</p>
                      <button className='bg-[#63D9B9] w-[188px] h-[48px] md:h-[56px] rounded-[8px] py-[1px] md:py-[14px] text-[16px] text-[#010101]'>
@@ -26,8 +36,8 @@ const Expertise = () => {
                         </button>
             </div>
             {/* item 2 */}
-            <div className='flex flex-col relative w-[382px] h-[508px] md:w-[754px] md:h-[844px] gap-8 md:gap-20 mx-auto md:mx-0 md:ml-[5rem]
-            mt-10 md:mt-[-4.8rem] text-white'>
+            <div className='flex flex-col relative w-[382px] h-[508px] md:w-[754px] md:h-[844px] gap-8 md:gap-8 mx-auto md:mx-0 md:ml-[5rem]
+            mt-10 md:mt-[-6rem] text-white'>
                 <Image
                     src="/Images/Frame 205.svg"
                     alt="Number Image"
