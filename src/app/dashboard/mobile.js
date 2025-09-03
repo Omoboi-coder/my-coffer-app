@@ -6,7 +6,7 @@ const Mobile = () => {
     <div className='flex flex-col md:hidden'>
               {/* div 1 */}
               <div className='flex flex-row w-[536px] h-[128px] gap-[8px] 
-              mt-5 ml-6'>
+              mt-5 mx-6'>
                 {/* image 1 */}
                 <div className='flex w-[200px] h-[128px] relative rounded-[8px]
                 bg-[#EF6315]'>
@@ -83,18 +83,18 @@ const Mobile = () => {
                       />
               </div>
               {/* div 3 */}
-              <div className='flex flex-row w-[382px] h-[24px] justify-between mt-5 ml-6'>
+              <div className='flex flex-row max-w-[382px] h-[24px] justify-between mt-5 mx-6'>
                 <h3 className='text-[16px] text-white'>Recent Activities</h3>
                 <h5 className='text-[12px] text-[#63D9B9] opacity-70 mt-1'>View all</h5>
     
               </div>
               {/* div 4 */}
-              <div className='flex flex-col w-[382px] h-[220px] gap-[10px] mt-5 ml-6'>
+              <div className='flex flex-col max-w-[382px] h-[220px] gap-[10px] mt-5 mx-6'>
                 {/* item 1 */}
-                <div className='flex flex-row rounded-[8px] py-2 gap-17 bg-[#282828]'>
-                  <div className='flex flex-col w-[167px] h-[52px] space-y-1'>
+                <div className='flex flex-row rounded-[8px] py-2 gap-16 bg-[#282828]'>
+                  <div className='flex flex-col max-w-[167px] h-[52px] space-y-1'>
                     <p className='ml-3 text-white opacity-80'>11:26 am</p>
-                    <div className=' flex flex-row  ml-3 gap-2 text-[16px] text-white'>
+                    <div className=' flex flex-row ml-3 gap-2 text-[16px] text-white'>
                     <Image
                       src="/Images/wallet-money.svg"
                       alt=''
@@ -117,8 +117,8 @@ const Mobile = () => {
                       />
                 </div>
                   {/* item 2 */}
-                <div className='flex flex-row rounded-[8px] py-2 gap-17 bg-[#282828]'>
-                  <div className='flex flex-col w-[167px] h-[52px] space-y-1'>
+                <div className='flex flex-row rounded-[8px] py-2 gap-16 bg-[#282828]'>
+                  <div className='flex flex-col max-w-[167px] h-[52px] space-y-1'>
                     <p className='ml-3 text-white opacity-80'>11:26 am</p>
                     <div className=' flex flex-row  ml-3 gap-2 text-[16px] text-white'>
                     <Image
@@ -143,8 +143,8 @@ const Mobile = () => {
                       />
                 </div>
                  {/* item 3 */}
-                <div className='flex flex-row rounded-[8px] py-2 gap-17 bg-[#282828]'>
-                  <div className='flex flex-col w-[167px] h-[52px] space-y-1'>
+                <div className='flex flex-row rounded-[8px] py-2 gap-16 bg-[#282828]'>
+                  <div className='flex flex-col max-w-[167px] h-[52px] space-y-1'>
                     <p className='ml-3 text-white opacity-80'>11:26 am</p>
                     <div className=' flex flex-row  ml-3 gap-2 text-[16px] text-white'>
                     <Image
@@ -171,8 +171,8 @@ const Mobile = () => {
               </div>
                 {/* div 5 */}
                         {/* item 1 */}
-                    <div className='flex flex-row w-[482px] h-[56px] mt-8'>
-                        <div className='flex w-[180px] h-[56px] rounded-[8px] py-[12px] ml-6 border 
+                    <div className='flex flex-row max-w-[482px] h-[56px] mt-8 mx-6.5 gap-4'>
+                        <div className='flex max-w-[180px] min-[430px]:w-[210px] h-[56px] rounded-[8px] p-[12px] border 
                         text-white border-[#244E43] bg-[#0D0D0D] '>
                           <div className='flex flex-row w-[146px] h-[32px] gap-2 mx-auto'>
                              <Image
@@ -186,7 +186,7 @@ const Mobile = () => {
                           </div>
                         </div>
                          {/* item 2 */}
-                        <div className='flex flex-row w-[180px] h-[56px] rounded-[8px] py-[12px] ml-6 border 
+                        <div className='flex flex-row max-w-[180px] min-[430px]:w-[210px] h-[56px] rounded-[8px] p-[12px] border 
                         text-white border-[#244E43] bg-[#0D0D0D] '>
                           <div className='flex flex-row w-[146px] h-[32px] gap-2 mx-auto'>
                              <Image

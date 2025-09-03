@@ -39,30 +39,30 @@ const DashboardLayout = ({ children }) => {
         </div>
 
         {/* Right side content - with bottom padding on mobile for nav */}
-        <div className='flex-1 md:flex-1 w-full min-h-full pb-20 md:pb-0'>
+        <div className='flex-1 md:flex-1 w-full h-full pb-20 md:pb-0'>
           {children}
         </div>
       </div>
 
       {/* Mobile Bottom Navigation - only shows on mobile */}
-      <nav className='md:hidden fixed bottom-0 left-0 right-0 bg-[#282828] border z-50'>
+      <nav className='md:hidden fixed bottom-0 left-0 right-0 bg-[#282828] z-50'>
         <div className='flex justify-around items-center py-2'> 
           {/* Dashboard */}
-          <button className='flex flex-col items-center py-2 px-3'>
-            <div className='w-6 h-6 mb-1'>
-              <Image
-                src="/Images/element-3 (2).svg"
-                alt="Logo"
-                width={24}
-                height={24}
-                className='text-[#63D9B9]'
-                />          
-            </div>
-            <Link href="/dashboard" className='text-xs text-[#63D9B9] cursor-pointer'>Dashboard</Link>
-          </button>
+          <Link href="/dashboard" className='flex flex-col items-center py-2 px-3'>
+          <div className='w-6 h-6 mb-1'>
+            <Image
+              src="/Images/element-3 (2).svg"
+              alt="Logo"
+              width={24}
+              height={24}
+              className='text-[#63D9B9]'
+            />          
+          </div>
+          <p className='text-xs text-[#63D9B9] cursor-pointer'>Dashboard</p>
+        </Link>
 
           {/* Activity */}
-          <button className='flex flex-col items-center text-white py-2 px-3'>
+          <Link href="/activity" className='flex flex-col items-center text-white py-2 px-3'>
             <div className='w-6 h-6 mb-1'>
              <Image
                 src="/Images/activity.svg"
@@ -72,11 +72,11 @@ const DashboardLayout = ({ children }) => {
                 className='text-[#63D9B9]'
                 />          
             </div>
-            <Link href="/activity" className='text-xs cursor-pointer'>Activity</Link>
-          </button>
+            <p className='text-xs cursor-pointer'>Activity </p>
+          </Link>
 
           {/* schedule */}
-          <button className='flex flex-col items-center text-white py-2 px-3'>
+          <Link href="/schedule" className='flex flex-col items-center text-white py-2 px-3'>
             <div className='w-6 h-6 mb-1'>
               <Image
                 src="/Images/calendar-2.svg" people
@@ -86,11 +86,11 @@ const DashboardLayout = ({ children }) => {
                 className='text-[#63D9B9]'
                 />
             </div>
-            <Link href="/schedule" className='text-xs cursor-pointer'>Schedule</Link>
-          </button>
+            <p className='text-xs cursor-pointer'>Schedule</p>
+          </Link>
 
           {/* Members */}
-          <button className='flex flex-col items-center text-white py-2 px-3'>
+          <Link href="/members" className='flex flex-col items-center text-white py-2 px-3'>
             <div className='w-6 h-6 mb-1'>
                 <Image
                 src="/Images/people.svg"
@@ -100,11 +100,11 @@ const DashboardLayout = ({ children }) => {
                 className='text-[#63D9B9]'
                 />
             </div>
-             <Link href="/members" className='text-xs cursor-pointer'>Members</Link>
-          </button>
+             <p className='text-xs cursor-pointer'>Members</p>
+          </Link>
 
           {/* Payouts */}
-          <button className='flex flex-col items-center text-white py-2 px-3'>
+          <Link href="/Payouts" className='flex flex-col items-center text-white py-2 px-3'>
             <div className='w-6 h-6 mb-1'>
               <Image
                 src="/Images/money-send.svg"
@@ -114,8 +114,8 @@ const DashboardLayout = ({ children }) => {
                 className='text-[#63D9B9]'
                 />
             </div>
-            <Link href="/Payouts" className='text-xs cursor-pointer'>Payouts</Link>
-          </button>
+            <p className='text-xs cursor-pointer'>Payouts</p>
+          </Link>
         </div>
       </nav>
     </section>
