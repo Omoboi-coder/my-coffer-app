@@ -2,6 +2,8 @@ import React from 'react'
 import LeftCon from './LeftCon'
 import Image from 'next/image'
 import Link from 'next/link'
+import Menu from './Menu'
+
 const DashboardLayout = ({ children }) => {
   return (
     <section className='bg-coffer-dark min-h-screen flex flex-col'>
@@ -9,6 +11,7 @@ const DashboardLayout = ({ children }) => {
       <nav className='md:hidden bg-growtoken-dark'>
         <div className='flex px-5 pt-5 pb-6 justify-between'>
           {/* nav Logo */}
+          <Link href="/">
           <div className="flex">
             <Image
               src="/Images/Logo+Name.svg"
@@ -18,14 +21,9 @@ const DashboardLayout = ({ children }) => {
               className="w-[170px] h-[36px] md:w-[227px] md:h-[48px]"
             />
           </div>
+          </Link>
           {/* Hamburger Menu */}
-            <Image
-              src="/Images/menu.svg"
-              alt="Logo"
-              width={24}
-              height={24}
-              className='mt-1'
-            />
+            <Menu />
         </div>
       </nav>
 
@@ -39,7 +37,7 @@ const DashboardLayout = ({ children }) => {
         </div>
 
         {/* Right side content - with bottom padding on mobile for nav */}
-        <div className='flex-1 md:flex-1 w-full h-full overflow-y-auto overflow-x-hidden'>
+        <div className='flex-1 md:flex-1 w-full h-full overflow-y-auto'>
           {children}
         </div>
       </div>
@@ -79,7 +77,7 @@ const DashboardLayout = ({ children }) => {
           <Link href="/schedule" className='flex flex-col items-center text-white py-2 px-3'>
             <div className='w-6 h-6 mb-1'>
               <Image
-                src="/Images/calendar-2.svg" people
+                src="/Images/calendar-2.svg"
                 alt="Logo"
                 width={24}
                 height={24}

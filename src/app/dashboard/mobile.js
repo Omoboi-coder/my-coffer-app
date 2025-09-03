@@ -3,74 +3,76 @@ import Image from 'next/image'
 
 const Mobile = () => {
   return (
-    <div className='flex flex-col md:hidden relative pb-20'>
-              {/* div 1 */}
-              <div className='flex flex-row w-[536px] h-[128px] gap-[8px] 
-              mt-5 mx-6'>
-                {/* image 1 */}
-                <div className='flex w-[200px] h-[128px] relative rounded-[8px]
-                bg-[#EF6315]'>
-                  <div className='flex flex-col w-[134px] h-[96px] ml-3  
-                  mt-4 text-white space-y-[40px]'>
-                    <h2 className='text-[16px] '>Available Balance</h2>
-                    <div className='flex flex-row w-[126px] h-[32px] '>
-                      <p className='w-[120px] h-[40px] text-[24px] '>24,000</p>
-                      <p className='text-[16px] mt-2'>USDT</p>
+    <div className='flex flex-col md:hidden relative pb-10'>
+              {/* div 1 - Horizontally Scrollable */}
+              <div className='mt-5 mx-6'>
+                <div className='flex flex-row w-full gap-[8px] overflow-x-auto'>
+                  {/* image 1 */}
+                  <div className='flex w-[200px] h-[128px] relative rounded-[8px] flex-shrink-0
+                  bg-[#EF6315]'>
+                    <div className='flex flex-col w-[134px] h-[96px] ml-3  
+                    mt-4 text-white space-y-[40px]'>
+                      <h2 className='text-[16px] '>Available Balance</h2>
+                      <div className='flex flex-row w-[126px] h-[32px] '>
+                        <p className='w-[120px] h-[40px] text-[24px] '>24,000</p>
+                        <p className='text-[16px] mt-2'>USDT</p>
+                      </div>
+                    </div>
+                    <Image
+                        src="/Images/Ellipse 44.svg"
+                        alt=''
+                        width={30}
+                        height={30}
+                        className='absolute top-0 left-[170px]'
+                        />
+                         <Image
+                        src="/Images/Ellipse 45.svg"
+                        alt=''
+                        width={21}
+                        height={21}
+                        className='absolute top-[85px] left-[180px]'
+                        />
+                  </div>
+                  {/* image 2 */}
+                  <div className='flex flex-col w-[160px] h-[128px] rounded-[16px] bg-[#4A4A4A] flex-shrink-0'>
+                    <div className='flex flex-col w-[118px] h-[86px] space-y-[16px] 
+                    mx-auto text-center mt-6'>
+                       <Image
+                        src="/Images/money-send.svg"
+                        alt=''
+                        width={36}
+                        height={36}
+                        className='mx-auto w-[16px] h-[16px]'
+                        />
+                        <div className='flex flex-col w-[118px] h-[54px] mt-2 text-white space-y-2'>
+                          <p className='text-[16px]'>Salary Payouts</p>
+                          <div className='flex flex-row mx-auto gap-[7px]'>
+                          <p className='text-[10px]'>For November</p>
+                          <p className='text-[12px]'>$9800</p>
+                          </div>
+                        </div>
                     </div>
                   </div>
-                  <Image
-                      src="/Images/Ellipse 44.svg"
-                      alt=''
-                      width={30}
-                      height={30}
-                      className='absolute top-0 left-[170px]'
-                      />
+                  {/* image 3 */}
+                  <div className='flex flex-col w-[160px] h-[128px] rounded-[16px] bg-white flex-shrink-0'>
+                    <div className='flex flex-col w-[147px] h-[86px] ml-2 mt-6'>
                        <Image
-                      src="/Images/Ellipse 45.svg"
-                      alt=''
-                      width={21}
-                      height={21}
-                      className='absolute top-[85px] left-[180px]'
-                      />
-                </div>
-                {/* image 2 */}
-                <div className='flex flex-col w-[160px] h-[128px] rounded-[16px] bg-[#4A4A4A]'>
-                  <div className='flex flex-col w-[118px] h-[86px] space-y-[16px] 
-                  mx-auto text-center mt-6'>
-                     <Image
-                      src="/Images/money-send.svg"
-                      alt=''
-                      width={36}
-                      height={36}
-                      className='mx-auto w-[16px] h-[16px]'
-                      />
-                      <div className='flex flex-col w-[118px] h-[54px] mt-2 text-white space-y-2'>
-                        <p className='text-[16px]'>Salary Payouts</p>
-                        <div className='flex flex-row mx-auto gap-[7px]'>
-                        <p className='text-[10px]'>For November</p>
-                        <p className='text-[12px]'>$9800</p>
+                        src="/Images/calendar-2 (2).svg"
+                        alt=''
+                        width={16}
+                        height={16}
+                        className='mx-auto'
+                        />
+                        <div className='w-[146px] h-[90px] mt-2 text-center text-black space-y-2'>
+                          <p className='text-[16px]'>Scheduled</p>
+                          <p className='text-[10px]'>Outgoing Payments</p>
+                          <p className='text-[12px]'>$7490</p>
                         </div>
-                      </div>
-                  </div>
-                </div>
-                {/* image 3 */}
-                <div className='flex flex-col w-[160px] h-[128px] rounded-[16px] bg-white'>
-                  <div className='flex flex-col w-[147px] h-[86px] ml-2 mt-6'>
-                     <Image
-                      src="/Images/calendar-2 (2).svg"
-                      alt=''
-                      width={16}
-                      height={16}
-                      className='mx-auto'
-                      />
-                      <div className='w-[146px] h-[90px] mt-2 text-center text-black space-y-2'>
-                        <p className='text-[16px]'>Scheduled</p>
-                        <p className='text-[10px] text-start'>Outgoing Payments</p>
-                        <p className='text-[12px]'>$7490</p>
-                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              
               {/* div 2 */}
               <div className='flex flex-row w-[215px] h-[24px] text-[#63D9B9] text-[16px] mt-5 ml-6'>
                 <p>Member of the Month</p>
@@ -200,7 +202,7 @@ const Mobile = () => {
                           </div>
                         </div>
                     </div>
-                    <div className='max-w-[382px] h-[100px] rounded-[8px] mt-6 mx-6 mb-10'>
+                    <div className='max-w-[382px] h-[100px] rounded-[8px] mt-6 mx-6 mb-4'>
                       <Image
                         src="/Images/Withdraw Fund (1).svg"
                         alt=''

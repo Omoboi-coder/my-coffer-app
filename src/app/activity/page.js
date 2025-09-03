@@ -24,18 +24,19 @@ const activity = () => {
                 <p className='text-[45px] text-white ml-2'>Activity</p>
             </div>
              {/* search div */}
-                <div className='flex flex-row md:absolute right-20 top-20 w-[396px] md:w-[285px] h-[40px] 
-                md:h-[50px] rounded-[12px] text-[12px] text-[#B6B6B6] md:p-4 p-2.5 ml-6 md:ml-0 gap-2 border border-[#353535]'>
-                <div className='flex flex-row w-[63px] h-[18px] gap-2 mb-1 md:mb-0'>
-                  <Image
-                    src="/Images/search-normal.svg"
-                    alt=''
-                    width={12}
-                    height={12}
-                    />
-                    <p>search</p> 
-                 </div>
-                </div>
+                    <div className='flex flex-row md:absolute md:right-5 md:top-20 max-w-[382px] md:w-[285px] h-[40px] 
+                      md:h-[50px] rounded-[12px] text-[12px] text-[#B6B6B6] md:p-4 p-2.5 mx-5 md:mx-0 gap-2
+                      border border-[#353535]'>
+                   <div className='flex flex-row w-[63px] h-[18px] gap-2 mb-1 md:mb-0'>
+                     <Image
+                      src="/Images/search-normal.svg"
+                      alt=''
+                      width={12}
+                      height={12}
+                      />
+                      <p>search</p> 
+                      </div>
+                    </div>
                 {/* No activity container */}
                 <div className='flex flex-col absolute top-[15rem] md:left-[18rem] left-[5rem] w-[260px] h-[292px] md:w-[456px] md:h-[496px]'>
                     <Image
