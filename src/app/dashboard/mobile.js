@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Mobile = () => {
   return (
-    <div className='flex flex-col md:hidden'>
+    <div className='flex flex-col md:hidden relative pb-20'>
               {/* div 1 */}
               <div className='flex flex-row w-[536px] h-[128px] gap-[8px] 
               mt-5 mx-6'>
@@ -200,13 +200,13 @@ const Mobile = () => {
                           </div>
                         </div>
                     </div>
-                    <div className='absolute top-[41rem] right-5 w-[382px] h-[100px] rounded-[8px]'>
+                    <div className='max-w-[382px] h-[100px] rounded-[8px] mt-6 mx-6 mb-10'>
                       <Image
                         src="/Images/Withdraw Fund (1).svg"
                         alt=''
                         width={382}
                         height={100}
-                        className=''
+                        className='w-full h-full object-contain'
                         />    
                     </div>           
     </div>

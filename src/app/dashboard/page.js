@@ -19,7 +19,7 @@ const dashboard = () => {
           <h1>Dashboard</h1>
         </div>
         {/* search div */}
-        <div className='flex flex-row md:absolute md:right-5 md:top-20 max-w-[386px] md:w-[285px] h-[40px] 
+        <div className='flex flex-row md:absolute md:right-5 md:top-20 max-w-[382px] md:w-[285px] h-[40px] 
           md:h-[50px] rounded-[12px] text-[12px] text-[#B6B6B6] md:p-4 p-2.5 mx-5 md:mx-0 gap-2
           border border-[#353535]'>
        <div className='flex flex-row w-[63px] h-[18px] gap-2 mb-1 md:mb-0'>

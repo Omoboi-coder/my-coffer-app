@@ -39,7 +39,7 @@ const DashboardLayout = ({ children }) => {
         </div>
 
         {/* Right side content - with bottom padding on mobile for nav */}
-        <div className='flex-1 md:flex-1 w-full h-full pb-20 md:pb-0'>
+        <div className='flex-1 md:flex-1 w-full h-full overflow-y-auto overflow-x-hidden'>
           {children}
         </div>
       </div>
