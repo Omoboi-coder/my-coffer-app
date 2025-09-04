@@ -117,7 +117,7 @@ const Footer = () => {
     </div>
 
     {/* flex container */}
-        <div className='flex md:hidden flex-col relative mx-auto w-[430px] h-[478px] gap-10 py-4'>
+        <div className='flex md:hidden flex-col relative mx-auto w-full h-[478px] gap-10 py-4'>
        {/* mobile footer */}
        <div className='flex flex-col mx-auto w-[382px] h-[407px]'>
         <div className='flex flex-row w-[380px] h-[24px] space-x-24 mx-auto '>
@@ -168,7 +168,7 @@ const Footer = () => {
             className='relative w-[382px] h-[50px] bg-[#63D9B9] rounded-[36px]
             border-2 border-white placeholder:text-[#000000] placeholder:text-[14px] px-4 py-2'
             />
-            <button className='absolute top-42 left-70 w-[126px] h-[48px] bg-[#010101] rounded-[36px] 
+            <button className='absolute top-42 left-70 w-[120px] h-[48px] bg-[#010101] rounded-[36px] 
             border border-y-white border-r-white text-[16px] py-[10px] text-[#63D9B9]'>
             Subscribe
             </button>   
@@ -221,7 +221,7 @@ const Footer = () => {
         </div>
         
         {/* footer */}
-        <div className='flex flex-row absolute bottom-4 w-[430px] h-[24px] text-white text-[12px]
+        <div className='flex flex-row absolute bottom-4 w-full h-[24px] text-white text-[12px]
         gap-4 border-1 border-t-[#4E4E4E] border-x-0 border-b-0'>
             <p className='mt-0.5 ml-[1.5rem]'>&copy; Payclick 2025 All rights reserved.</p>
             <p className='mt-0.5'>Privacy Policy</p>

@@ -4,19 +4,23 @@ import Image from 'next/image'
 const Payment = () => {
   return (
     <section id='payment' className='bg-coffer-dark relative overflow-hidden'>
-        {/* Custom background image overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 z-0"
-          style={{
-            backgroundImage: "url('/Images/Group (3).svg')"
-          }}
-        />
-        {/* flex container */}
-        <div className='flex flex-col md:flex-row mx-auto gap-8 text-center md:text-start w-[430px] h-[824px] md:w-[1728px] md:h-[900px]
+      {/* flex container */}
+        <div className='flex flex-col md:flex-row mx-auto gap-8 text-center md:text-start w-[430px] h-[784px] md:w-[1728px] md:h-[900px]
         relative z-10'>
+        {/* Custom background image overlay */}
+           <div className="absolute z-0 opacity-100 md:left-[5.5rem] 2xl:left-[8rem]" 
+          style={{
+          backgroundImage: "url('/Images/Group (3).svg')",
+          backgroundSize: 'contain',    
+          backgroundRepeat: 'no-repeat',   
+          backgroundPosition: 'center',    
+          width: '80%',                   
+          height: '100%',                                                 
+        }}
+      />
             {/* item 1 */}
             <div className='flex flex-col mx-auto md:mx-0 w-[352px] h-[380px] md:w-[600px] md:h-[550px] 
-            gap-[64px] md:gap-[30px] md:ml-[5rem] mt-10 md:mt-[15rem] text-white'>
+            gap-[54px] md:gap-[30px] md:ml-[5rem] mt-7 md:mt-[15rem] text-white z-50'>
                 <h3 className='text-[20px] md:text-[35px]'>Why Choose Paycheck</h3>
                 <div className='flex flex-col gap-[24px] md:gap-0'>
                 <h2 className='text-[40px] md:text-[58px]'>Mastery in Salary Scheduling</h2>
@@ -28,9 +32,9 @@ const Payment = () => {
 
             </div>
             {/* outer div */}
-            <div className='flex flex-row space-x-6 '>
+            <div className='flex flex-row space-x-6 mx-9 overflow-x-auto overflow-y-hidden scrollbar-none z-50'>
             {/* item 2 */}
-            <div className='flex flex-row md:flex-col w-[240px] h-[320px] md:w-[260px] md:h-[670px] gap-7 
+            <div className='flex flex-row md:flex-col w-full h-full md:w-[260px] md:h-[670px] gap-4 
              md:mt-[4rem] mt-0'>
                 {/* image 1 */}
                 <Image
@@ -38,7 +42,7 @@ const Payment = () => {
                     alt="Paycard Image 1"
                     width={260}
                     height={386}
-                    className="w-[240px] h-[320px] md:w-[260px] md:h-[320px] rounded-[16px] ml-7 md:ml-0"
+                    className="w-[240px] h-[320px] md:w-[260px] md:h-[320px] rounded-[16px]"
                 />
                 {/* image 2 */}
                 <Image
@@ -46,7 +50,7 @@ const Payment = () => {
                     alt="Paycard Image 2"
                     width={260}
                     height={386}
-                    className="w-[240px] h-[320px] md:w-[260px] md:h-[320px] rounded-[16px]"
+                    className="w-[240px] h-[320px]  md:w-[260px] md:h-[320px] rounded-[16px]"
                 />
             </div>
               {/* item 3 */}

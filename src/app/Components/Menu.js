@@ -10,7 +10,7 @@ const Menu = () => {
   }
 
 return (
-    <>
+    <section className='flex md:hidden'>
         <Image
             src="/Images/menu.svg"
             alt="Logo"
@@ -82,7 +82,7 @@ return (
                   </div>
             </div>
         )}
-    </>
+    </section>
 )
 }
 

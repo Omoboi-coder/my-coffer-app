@@ -14,15 +14,12 @@ const Hero = () => {
           }}
         />
         
-        {/* Content container with higher z-index */}
-        <div className="relative z-10">
-          <Navbar />
           {/* flex container */}
           <div className='flex flex-col mx-auto w-[336px] h-[625px] md:w-[1062px] md:h-[648px] 
-           gap-[48px] md:gap-[56px] items-center text-white mt-20 md:mt-15'>
+           gap-[30px] md:gap-[56px] items-center text-white mt-10 md:mt-15 z-50'>
               {/* item 1 */}
-              <div className=' flex flex-row .bg-hero-gradient w-[336px] h-[40px] md:w-[670px] md:h-[80px] border
-              rounded-[8px] gap-[10px] text-white p-[20px] text-[12px] md:text-[24px]  items-center justify-center'>
+              <div className=' flex flex-row bg-hero-gradient w-[336px] h-[40px] md:w-[670px] md:h-[80px] border
+              rounded-[8px] gap-[10px] text-white p-[20px] text-[12px] md:text-[24px]  items-center justify-center z-20'>
                   <Image
                   src="/Images/Frame 172.svg"
                   alt="PayCheck Logo"
@@ -34,7 +31,7 @@ const Hero = () => {
 
               </div>
               {/* item 2 */}
-              <div className='flex flex-col h-[388px] md:h-[400px] gap-[36px] md:gap-[48px] text-white items-center'>
+              <div className='flex flex-col h-[388px] md:h-[400px] gap-[36px] md:gap-[48px] text-white items-center z-20'>
                   <h1 className='h-[192px] md:h-[256px] text-[56px] md:text-[120px] text-center leading-[1]'>
                     Simplifying Salary Payments
                     </h1>
@@ -44,14 +41,13 @@ const Hero = () => {
                   </p>
 
               </div>
-              <Link href="dashboard" className='flex justify-center items-center'>
+              <Link href="dashboard" className='flex justify-center items-center z-20'>
               <button className='bg-[#63D9B9] w-[189px] h-[56px] gap-[10px] rounded-[8px]
                text-[16px] text-[#010101] cursor-pointer'>
                   Launch App
             </button>
             </Link>
           </div>
-        </div>
     </section>
   )
 }

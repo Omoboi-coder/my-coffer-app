@@ -119,6 +119,7 @@ const LeftCon = () => {
                       </div>
                     </div>
                   </div>
+                  {/* attendance link */}
                   <div className='flex flex-row w-[170px] h-[20px] mx-auto mt-6 justify-between'>
                     <p className=' text-[14px] text-white opacity-85'>Attendance Link</p>
                     <Image
