@@ -5,8 +5,8 @@ import Image from 'next/image'
 const activity = () => {
   return (
     <DashboardLayout>
-        <section className='flex flex-col md:flex-row 2xl:mx-auto relative w-full h-full'>
-            <div className='hidden flex-col md:w-[185px] md:h-[112px] gap-[24px] mt-8'>
+        <section className='flex flex-col md:flex-row 2xl:mx-auto relative w-full h-full md:h-[1000px]'>
+            <div className='hidden md:flex flex-col md:w-[185px] md:h-[112px] gap-[24px] mt-8'>
               <div className='flex flex-row h-[36px] gap-1'>
                 <Image
                 src="Images/FourthCanvas - jpeg 0.svg"
@@ -24,7 +24,7 @@ const activity = () => {
                 <p className='text-[45px] text-white ml-2'>Activity</p>
             </div>
              {/* search div */}
-                    <div className='flex flex-row md:absolute md:right-5 md:top-20 max-w-[382px] md:w-[285px] h-[40px] 
+                    <div className='flex flex-row md:absolute md:right-15 md:top-20 max-w-[382px] md:w-[285px] h-[40px] 
                       md:h-[50px] rounded-[12px] text-[12px] text-[#B6B6B6] md:p-4 p-2.5 mx-5 md:mx-0 gap-2
                       border border-[#353535]'>
                    <div className='flex flex-row w-[63px] h-[18px] gap-2 mb-1 md:mb-0'>
@@ -42,13 +42,13 @@ const activity = () => {
                     <Image
                     src="/Images/Mobile banking app with secure payment.svg"
                     alt=''
-                    fit
                     width={456}
                     height={456}
                     />
                     <p className='text-[16px] md:text-[24px] text-white opacity-80 mx-auto'> You don’t have any Activities</p> 
                 </div>
-                <div className='hidden md:hidden flex-row w-[109px] h-[24px] mt-8 ml-6 text-white'>
+
+                <div className='hidden flex-row w-[109px] h-[24px] mt-8 ml-6 text-white'>
                     <span>24th Nov, 2023</span>
                 </div>
                    {/* div 4 */}

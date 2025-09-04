@@ -4,11 +4,11 @@ import Image from 'next/image'
 const Features = () => {
   return (
     <section id='features' className='bg-coffer-dark overflow-hidden'>
-        {/* flex container - MOVED BACKGROUND IMAGES INSIDE HERE */}
+        {/* flex container */}
         <div className='flex flex-col w-[430px] h-[1040px] md:w-[1728px] md:h-[615px] mx-auto
         relative text-white z-10'>
             
-            {/* Custom background image overlay - NOW RELATIVE TO CONTAINER */} 
+            {/* Custom background image overlay */} 
             <div 
               className="absolute top-[10px] right-[20px] md:left-[65rem] 2xl:left-[75rem] z-0 opacity-100 w-[279px] h-[269px]"
               style={{
@@ -18,7 +18,7 @@ const Features = () => {
                 backgroundPosition: 'center'
               }}
             />
-            {/* Custom background image overlay - NOW RELATIVE TO CONTAINER */} 
+            {/* Custom background image overlay*/} 
             <div 
               className="absolute top-[350px] left-[20px] md:left-[50px] 2xl:left-[15rem] w-[245px] h-[262px]"
               style={{
@@ -31,7 +31,7 @@ const Features = () => {
             {/* Heading */}
             <h3 className='w-fit md:w-[496px] text-[20px] md:text-[45px] h-[52px] mt-10 md:mt-10 ml-6 md:ml-5 2xl:ml-50'>How Payclick Works</h3>   
             {/* outer div*/}
-            <div className='flex flex-col md:flex-row w-[382px] h-[848px] md:w-[1305px] md:h-[360px] mx-auto 2xl:mx-auto md:mx-5 gap-4 md:gap-3
+            <div className='flex flex-col md:flex-row w-[382px] h-[848px] md:max-w-[1305px] md:h-[360px] min-[414px]:ml-4 min-[430px]:ml-6 2xl:mx-5 md:mx-8 gap-4 md:gap-3
             mt-8 md:mt-25 opacity-80'>
             {/* box 1  */}
             <div className='flex flex-col w-[382px] h-[200px] md:w-[320px] md:h-[360px] border justify-between

@@ -16,7 +16,7 @@ return (
             alt="Logo"
             width={24}
             height={24}
-            className="mt-1"
+            className="mt-1.5"
             onClick={toggleMenu}
         />
         {openMenu && (

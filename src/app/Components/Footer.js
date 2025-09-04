@@ -168,7 +168,7 @@ const Footer = () => {
             className='relative w-[382px] h-[50px] bg-[#63D9B9] rounded-[36px]
             border-2 border-white placeholder:text-[#000000] placeholder:text-[14px] px-4 py-2'
             />
-            <button className='absolute top-42 left-70 w-[120px] h-[48px] bg-[#010101] rounded-[36px] 
+            <button className='absolute top-42 left-71 w-[120px] h-[48px] bg-[#010101] rounded-[36px] 
             border border-y-white border-r-white text-[16px] py-[10px] text-[#63D9B9]'>
             Subscribe
             </button>   
@@ -222,9 +222,9 @@ const Footer = () => {
         
         {/* footer */}
         <div className='flex flex-row absolute bottom-4 w-full h-[24px] text-white text-[12px]
-        gap-4 border-1 border-t-[#4E4E4E] border-x-0 border-b-0'>
-            <p className='mt-0.5 ml-[1.5rem]'>&copy; Payclick 2025 All rights reserved.</p>
-            <p className='mt-0.5'>Privacy Policy</p>
+        gap-4 border-1 border-t-[#4E4E4E] border-x-0 border-b-0 '>
+            <p className='mt-1 ml-[1.5rem]'>&copy; Payclick 2025 All rights reserved.</p>
+            <p className='mt-1'>Privacy Policy</p>
             
          
 

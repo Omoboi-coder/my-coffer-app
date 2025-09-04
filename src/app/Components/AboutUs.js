@@ -4,11 +4,11 @@ import Image from 'next/image'
 const AboutUs = () => {
   return (
     <section id='aboutus' className='relative bg-coffer-dark overflow-hidden'>
-        {/* flex container - MOVED BACKGROUND IMAGE INSIDE HERE */}
+        {/* flex container  */}
         <div className='flex flex-col md:flex-row mx-auto gap-6 w-[430px] h-[640px] md:w-[1728px] md:h-[620px]
         text-white relative overflow-hidden z-10'>
             
-            {/* Custom background image overlay - NOW RELATIVE TO CONTAINER */} 
+            {/* Custom background image overlayR */} 
             <div className="absolute z-0 opacity-50 md:left-[10%] 2xl:left-[30%]"
               style={{
                 backgroundImage: "url('/Images/Group (5).svg')",

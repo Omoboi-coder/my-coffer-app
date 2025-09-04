@@ -1,11 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Navbar from './Navbar'
 
 const Hero = () => {
   return (
-    <section id='hero' className='bg-coffer-dark md:w-[1,728px] md:h-[850px] relative overflow-hidden'>
+    <section id='hero' className='bg-coffer-dark md:w-[1,728px] md:h-[770px] relative overflow-hidden'>
         {/* Custom background image overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 z-0"
@@ -15,7 +14,7 @@ const Hero = () => {
         />
         
           {/* flex container */}
-          <div className='flex flex-col mx-auto w-[336px] h-[625px] md:w-[1062px] md:h-[648px] 
+          <div className='flex flex-col mx-auto w-[336px] h-[575px] md:w-[1062px] md:h-[648px] 
            gap-[30px] md:gap-[56px] items-center text-white mt-10 md:mt-15 z-50'>
               {/* item 1 */}
               <div className=' flex flex-row bg-hero-gradient w-[336px] h-[40px] md:w-[670px] md:h-[80px] border

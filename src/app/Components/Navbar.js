@@ -22,7 +22,15 @@ const Navbar = () => {
               className="w-[170px] h-[36px] md:w-[227px] md:h-[48px]"
              />
           </div>
-          <Menu />
+          {/* HamburgerMenu  */}
+          <Image
+            src="/Images/menu.svg"
+            alt="Logo"
+            width={24}
+            height={24}
+            className="flex md:hidden mb-1"
+         />
+
             {/* Navigation links (Desktop) */}
             <div className="hidden md:flex text-white text-[16px] gap-[64px]">
               <Link href="#" className=" hover:text-red-500">Products</Link>
