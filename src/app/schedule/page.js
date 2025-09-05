@@ -5,7 +5,8 @@ import Image from 'next/image'
 const Schedule = () => {
   return (
     <DashboardLayout>
-        <section className='flex flex-col md:flex-wrap 2xl:mx-auto relative w-full h-full md:h-[1000px]'>
+        <section className='flex flex-col md:flex-wrap 2xl:mx-auto relative 
+         w-full h-full md:h-[1000px] pb-40 md:pb-0'>
         <div className='hidden md:flex flex-col md:w-[185px] md:h-[112px] gap-[24px] mt-8'>
             <div className='flex flex-row h-[36px] gap-1'>
             <Image
@@ -53,7 +54,7 @@ const Schedule = () => {
           </div>
           {/* button */}
           <div className='w-[196px] md:w-[243px] h-[52px] rounded-[8px] gap-[10px] absolute top-[40rem]
-           left-30 md:left-[49rem] md:absolute md:top-46 py-[14px] px-[28px] md:px-[28px] bg-[#63D9B9]'>
+           left-30 md:left-[49rem] md:absolute md:top-46 mb-6 md:mb-0 py-[14px] px-[28px] md:px-[28px] bg-[#63D9B9]'>
             <span>Schedule Payment</span>
           </div>
           {/* mobile schedule div */}
@@ -79,11 +80,10 @@ const Schedule = () => {
               height={24}
               className='absolute left-[22rem] top-4'
               />
-
-
           </div>
           {/* desktop schedule div */}
-          <div className='hidden md:flex flex-col md:w-[177px] md:h-[136px] md:gap-[72px] text-white md:mt-12  opcaity-500'> 
+          <div className='hidden md:flex flex-col md:w-[177px] md:h-[136px] md:gap-[72px]
+           text-white md:mt-12  opcaity-500'> 
             {/* item 1 */}
             <div className='flex flex-row md:w-[109px] md:h-[32px] md:gap-[24px] text-[24px]'>
             <Image
