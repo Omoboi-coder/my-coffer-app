@@ -6,7 +6,7 @@ const Schedule = () => {
   return (
     <DashboardLayout>
         <section className='flex flex-col md:flex-wrap 2xl:mx-auto relative 
-         w-full h-full md:h-[1000px] pb-[45rem] md:pb-0'>
+         w-full h-full md:h-[1000px] pb-[40rem] md:pb-0'>
         <div className='hidden md:flex flex-col md:w-[185px] md:h-[112px] gap-[24px] mt-8'>
             <div className='flex flex-row h-[36px] gap-1'>
             <Image

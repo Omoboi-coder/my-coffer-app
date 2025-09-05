@@ -82,7 +82,7 @@ const Payouts = () => {
                      {/*outer div  */}
                      <div className='flex flex-row w-[382px] h-[48px] gap-3'>
                         {/* item 2 */}
-                    <div className='flex flex-row w-[185px] h-[48px] rounded-[8px] justify-between py-[8px] px-[12px] bg-[#7BB5FC]'>
+                    <div className='flex flex-row w-[185px] h-[48px] rounded-[8px] justify-between py-[8px] px-[12px] text-black bg-[#7BB5FC]'>
                       <div className='flex flex-row w-[50px] h-[24px] gap-[4px] mt-1'>
                         <span className='text-[16px]'>Nov</span>
                          <Image
@@ -95,7 +95,7 @@ const Payouts = () => {
                         <span className='text-[20px]'>$7,300</span>
                     </div>
                     {/* item 3 */}
-                    <div className='flex flex-row w-[185px] h-[48px] rounded-[8px] justify-between py-[8px] px-[12px] bg-white'>
+                    <div className='flex flex-row w-[185px] h-[48px] text-black rounded-[8px] justify-between py-[8px] px-[12px] bg-white'>
                       <div className='flex flex-row w-[60px] h-[24px] gap-[4px] mt-1'>
                         <span className='text-[16px]'>2023</span>
                          <Image
