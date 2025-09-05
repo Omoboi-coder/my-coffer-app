@@ -102,7 +102,7 @@ const DashboardLayout = ({ children }) => {
           </Link>
 
           {/* Payouts */}
-          <Link href="/Payouts" className='flex flex-col items-center text-white py-2 px-3'>
+          <Link href="/payouts" className='flex flex-col items-center text-white py-2 px-3'>
             <div className='w-6 h-6 mb-1'>
               <Image
                 src="/Images/money-send.svg"

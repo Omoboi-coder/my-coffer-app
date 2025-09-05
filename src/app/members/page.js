@@ -5,7 +5,8 @@ import DashboardLayout from '../Components/DashboardLayout'
 const Members = () => {
   return (
     <DashboardLayout>
-        <section className='flex flex-col md:flex-wrap 2xl:mx-auto relative w-full h-full md:h-[1000px]'>
+        <section className='flex flex-col md:flex-wrap 2xl:mx-auto relative 
+        pb-20 md:pb-0 w-full h-full md:h-[1000px]'>
         <div className='hidden md:flex flex-col md:w-[185px] md:h-[112px] gap-[24px] mt-8'>
             <div className='flex flex-row h-[36px] gap-1'>
             <Image
@@ -40,7 +41,7 @@ const Members = () => {
           </div>
           {/* sort div */}
           <div className=' flex flex-row w-[104px] h-[40px] md:w-[93px] md:h-[52px] px-3 md:px-0 
-          py-[8px] md:py-[14]px] rounded-[8px] md:mt-10 mt-5 ml-[18.5rem] md:ml-0 border border-[#D9D9D9] md:border-0'>
+          py-[8px] md:py-[14px] rounded-[8px] md:mt-10 mt-5 ml-[18.5rem] md:ml-0 border border-[#D9D9D9] md:border-0'>
             <div className='flex flex-row gap-[8px]'>
             <span className='text-[14px] md:text-[16px] text-white opacity-80'>Sort by</span>
             <Image
@@ -59,7 +60,7 @@ const Members = () => {
           </button>
           {/* button 2 */}
           <button className='w-[196px] md:w-[195px] h-[52px] rounded-[8px] gap-[10px] text-center absolute top-[40rem]
-           left-30 md:left-[52rem] md:absolute md:top-46 py-[14px] px-[28px] md:px-[48px] bg-[#63D9B9]'>
+           left-30 md:left-[52rem] md:absolute md:top-46 mb-6 md:mb-0 py-[14px] px-[28px] md:px-[48px] bg-[#63D9B9]'>
             <span>Add Member</span>
           </button>
           {/* mobile schedule div */}

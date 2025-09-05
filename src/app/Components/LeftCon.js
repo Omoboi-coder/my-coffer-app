@@ -8,7 +8,8 @@ const LeftCon = () => {
         {/* container 1 */}
             <div className='flex flex-col mx-auto bg-coffer-dark md:w-[235px] md:h-[1000px] border-2 border-r-[#4E4E4E]'>
                 {/* nav Logo */}
-                <div className="flex mt-8 mx-auto">
+                
+                <Link href="/" className="flex mt-8 mx-auto">
                 <Image
                  src="/Images/Logo+Name.svg"
                  alt="Logo"
@@ -16,7 +17,7 @@ const LeftCon = () => {
                  height={10}
                  className="w-[170px] h-[36px] md:w-[180px] md:h-[48px]"
                 />
-                </div>
+                </Link>
                     {/*outer div*/}
                   <div className='w-[180px] h-[295px] ml-8 mt-15 text-[16px] p-[8px]'>
                     <h5 className='text-[16px] text-[#949494]'>Admin Tools</h5>
