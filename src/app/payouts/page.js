@@ -108,7 +108,6 @@ const Payouts = () => {
                         <span className='text-[20px]'>$35,800</span>
                     </div>
                      </div>
-
                     </div>
                  {/* con 2 */}
                   <div className='flex flex-col md:flex-row md:flex-wrap w-[382px] h-[696px] md:w-[1077px] md:h-[338px] text-white/80 mx-auto md:mx-0 py-[10px] md:py-[10px] gap-[24px] mt-5 md:mt-12'>
