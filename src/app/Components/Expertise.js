@@ -5,7 +5,7 @@ const Expertise = () => {
   return (
     <section id='expertise' className='bg-coffer-dark overflow-hidden'>
          {/* flex container */}
-        <div className='flex flex-col mx-auto w-[430px] h-[990px] md:w-[1728px] md:h-[1206px] 
+        <div className='flex flex-col mx-auto w-[430px] h-[990px] md:w-[1728px] md:h-[1306px] 
         relative z-10'>
         {/* Custom background image overlay */}
         {/* <div
@@ -25,12 +25,12 @@ const Expertise = () => {
         }}
       /> 
             {/* item 1 */}
-            <div className='flex flex-col w-[382px] h-[410px] md:w-[631px] md:h-[504px] gap-7 md:gap-5 
+            <div className='flex flex-col w-[382px] h-[410px] md:w-[631px] md:h-[504px] gap-7 md:gap-10 
             mx-auto md:mx-0 md:ml-[40rem] mt-10 md:mt-8 text-white z-50'>
                 <h3 className='text-[20px] md:text-[30px]'>Our Expertise</h3>
                 <h2 className='text-[40px] leading-12 md:leading-16 mt-5 md:text-[58px] w-[362px] h-[144px]
-                 md:w-[540px] md:h-[160px]'>Masters of Precision Payroll Processing</h2>
-                <p className='w-[342px] h-[72px] md:w-[505px] md:h-[64px] text-[16px] md:text-[20px]'
+                 md:w-[631px] md:h-[160px]'>Masters of Precision Payroll Processing</h2>
+                <p className='w-[342px] h-[72px] md:w-[620px] md:h-[64px] text-[16px] md:text-[20px]'
                 >We specialize in the art and science of meticulous payroll management
                      and scheduling of salary payments</p>
                      <button className='bg-[#63D9B9] w-[188px] h-[48px] md:h-[56px] rounded-[8px]
@@ -63,7 +63,7 @@ const Expertise = () => {
                         className="absolute left-[2px] w-[8px] h-[32px] md:w-[24px] md:h-[24px] md:mt-5"
                     />
                  <h3 className='text-[20px] md:text-[45px]'> Seamless Salary Management </h3>
-                <p className='w-[325px] h-[168px] md:w-[659px] md:h-[160px] text-[16px] md:text-[24px]'> 
+                <p className='w-[345px] h-[168px] md:w-[675px] md:h-[180px] text-[16px] md:text-[24px]'> 
                     Managing salaries is more than just numbers; it&#39;s about empowering businesses 
                     to navigate payroll complexities effortlessly. Payclick excels in providing a seamless
                      salary management experience, offering tools and features that simplify the entire 
@@ -71,7 +71,7 @@ const Expertise = () => {
                 </p>
                 </div>
                 <h3 className='w-[209] h-[32px] text-[20px] md:text-[45px]
-                 md:w-[470px] md:h-[52px]'> Automated Efficiency </h3>
+                 md:w-[492px] md:h-[52px]'> Automated Efficiency </h3>
                 <h3 className='w-[219] h-[32px] text-[20px] md:text-[45px]
                  md:w-[492px] md:h-[52px]'> Compliance Assurance </h3>
              </div>

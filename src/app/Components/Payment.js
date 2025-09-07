@@ -20,11 +20,11 @@ const Payment = () => {
       />
             {/* item 1 */}
             <div className='flex flex-col mx-auto md:mx-0 w-[352px] h-[380px] md:w-[600px] md:h-[550px] 
-            gap-[54px] md:gap-[30px] md:ml-[5rem] mt-7 md:mt-[15rem] text-white z-50'>
+            gap-[54px] md:gap-[30px] md:ml-[5.5rem] mt-7 md:mt-[15rem] text-white z-50'>
                 <h3 className='text-[20px] md:text-[35px]'>Why Choose Paycheck</h3>
-                <div className='flex flex-col gap-[24px] md:gap-0'>
+                <div className='flex flex-col gap-[24px] md:gap-5'>
                 <h2 className='text-[40px] md:text-[58px]'>Mastery in Salary Scheduling</h2>
-                <p className='w-[320px] h-[144px] text-start md:w-[500px] md:h-[179px] text-[16px] md:text-[20px]'>
+                <p className='w-[330px] h-[144px] text-start md:w-[500px] md:h-[179px] text-[16px] md:text-[20px]'>
                     Our team, comprised of financial experts and tech innovators, excels in the art of salary scheduling. 
                     We&#39;ve honed our expertise to provide a platform that empowers businesses to effortlessly plan and execute timely salary payments.
                 </p>

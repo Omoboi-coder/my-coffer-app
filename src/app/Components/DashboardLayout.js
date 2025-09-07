@@ -1,10 +1,47 @@
+'use client'
 import React from 'react'
 import LeftCon from './LeftCon'
 import Image from 'next/image'
 import Link from 'next/link'
 import Menu from './Menu'
+import { usePathname } from 'next/navigation'
 
 const DashboardLayout = ({ children }) => {
+  const pathname = usePathname()
+
+  const navItems = [
+    {
+      href: '/dashboard',
+      icon: '/Images/element-3 (2).svg',
+      activeIcon: '/Images/element-3 colored(2).svg',
+      label: 'Dashboard'
+    },
+    {
+      href: '/activity',
+      icon: '/Images/activity.svg',
+      activeIcon: '/Images/activity colored.svg',
+      label: 'Activity'
+    },
+    {
+      href: '/schedule',
+      icon: '/Images/calendar-2.svg',
+      activeIcon: '/Images/calender-2 colored.svg',
+      label: 'Schedule'
+    },
+    {
+      href: '/members',
+      icon: '/Images/people.svg',
+      activeIcon: '/Images/people colored.svg',
+      label: 'Members'
+    },
+    {
+      href: '/payouts',
+      icon: '/Images/money-send.svg',
+      activeIcon: '/Images/money-send colored.svg',
+      label: 'Payouts'
+    }
+  ]
+
   return (
     <section className='bg-coffer-dark min-h-screen flex flex-col'>
       {/* Mobile navbar - only shows on small screens */}
@@ -44,76 +81,30 @@ const DashboardLayout = ({ children }) => {
 
       {/* Mobile Bottom Navigation - only shows on mobile */}
       <nav className='md:hidden fixed bottom-0 left-0 right-0 bg-[#282828] z-50'>
-        <div className='flex justify-around items-center py-2'> 
-          {/* Dashboard */}
-          <Link href="/dashboard" className='flex flex-col items-center py-2 px-3'>
-          <div className='w-6 h-6 mb-1'>
-            <Image
-              src="/Images/element-3 (2).svg"
-              alt="Logo"
-              width={24}
-              height={24}
-              className='text-[#63D9B9]'
-            />          
-          </div>
-          <p className='text-xs text-[#63D9B9] cursor-pointer'>Dashboard</p>
-        </Link>
-
-          {/* Activity */}
-          <Link href="/activity" className='flex flex-col items-center text-white py-2 px-3'>
-            <div className='w-6 h-6 mb-1'>
-             <Image
-                src="/Images/activity.svg"
-                alt="Logo"
-                width={24}
-                height={24}
-                className='text-[#63D9B9]'
-                />          
-            </div>
-            <p className='text-xs cursor-pointer'>Activity </p>
-          </Link>
-
-          {/* schedule */}
-          <Link href="/schedule" className='flex flex-col items-center text-white py-2 px-3'>
-            <div className='w-6 h-6 mb-1'>
-              <Image
-                src="/Images/calendar-2.svg"
-                alt="Logo"
-                width={24}
-                height={24}
-                className='text-[#63D9B9]'
-                />
-            </div>
-            <p className='text-xs cursor-pointer'>Schedule</p>
-          </Link>
-
-          {/* Members */}
-          <Link href="/members" className='flex flex-col items-center text-white py-2 px-3'>
-            <div className='w-6 h-6 mb-1'>
-                <Image
-                src="/Images/people.svg"
-                alt="Logo"
-                width={24}
-                height={24}
-                className='text-[#63D9B9]'
-                />
-            </div>
-             <p className='text-xs cursor-pointer'>Members</p>
-          </Link>
-
-          {/* Payouts */}
-          <Link href="/payouts" className='flex flex-col items-center text-white py-2 px-3'>
-            <div className='w-6 h-6 mb-1'>
-              <Image
-                src="/Images/money-send.svg"
-                alt="Logo"
-                width={24}
-                height={24}
-                className='text-[#63D9B9]'
-                />
-            </div>
-            <p className='text-xs cursor-pointer'>Payouts</p>
-          </Link>
+        <div className='flex justify-around items-center py-2'>
+          {navItems.map((item) => {
+            const isActive = pathname === item.href
+            
+            return (
+              <Link 
+                key={item.href}
+                href={item.href} 
+                className='flex flex-col items-center py-2 px-3'
+              >
+                <div className='w-6 h-6 mb-1'>
+                  <Image
+                    src={isActive ? item.activeIcon : item.icon}
+                    alt={item.label}
+                    width={24}
+                    height={24}
+                  />          
+                </div>
+                <p className={`text-xs cursor-pointer ${isActive ? 'text-[#63D9B9]' : 'text-white'}`}>
+                  {item.label}
+                </p>
+              </Link>
+            )
+          })}
         </div>
       </nav>
     </section>

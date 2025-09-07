@@ -18,7 +18,7 @@ const Hero = () => {
            gap-[30px] md:gap-[56px] items-center text-white mt-10 md:mt-15 z-50'>
               {/* item 1 */}
               <div className=' flex flex-row bg-hero-gradient w-[336px] h-[40px] md:w-[670px] md:h-[80px] border
-              rounded-[8px] gap-[10px] text-white p-[20px] text-[12px] md:text-[24px]  items-center justify-center z-20'>
+              rounded-[8px] gap-[10px] text-white p-[15px] text-[12px] md:text-[24px] items-center justify-center z-20'>
                   <Image
                   src="/Images/Frame 172.svg"
                   alt="PayCheck Logo"

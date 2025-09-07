@@ -7,7 +7,7 @@ const Members = () => {
     <DashboardLayout>
         <section className='flex flex-col md:flex-wrap 2xl:mx-auto relative 
         pb-[40rem] md:pb-0 w-full h-full md:h-[1000px]'>
-        <div className='hidden md:flex flex-col md:w-[185px] md:h-[112px] gap-[24px] mt-8'>
+        <div className='hidden md:flex flex-col md:w-[198px] md:h-[112px] gap-[24px] mt-8'>
             <div className='flex flex-row h-[36px] gap-1'>
             <Image
             src="Images/FourthCanvas - jpeg 0.svg"
@@ -40,7 +40,7 @@ const Members = () => {
               </div>
           </div>
           {/* sort div */}
-          <div className=' flex flex-row w-[104px] h-[40px] md:w-[93px] md:h-[52px] px-3 md:px-0 
+          <div className=' flex flex-row w-[104px] h-[40px] md:w-[93px] md:h-[52px] px-2 md:px-0 
           py-[8px] md:py-[14px] rounded-[8px] md:mt-10 mt-5 ml-[18.5rem] md:ml-0 border border-[#D9D9D9] md:border-0'>
             <div className='flex flex-row gap-[8px]'>
             <span className='text-[14px] md:text-[16px] text-white opacity-80'>Sort by</span>
@@ -55,7 +55,7 @@ const Members = () => {
           {/* button 1 */}
           <button className='w-[196px] md:w-[188px] h-[52px] rounded-[8px] gap-[10px] text-center
            absolute top-[40rem] text-[#63D9B9] border border-[#63D9B9] left-30 md:left-[39rem] md:absolute
-           md:top-46 py-[14px] px-[28px] md:px-[28px]'>
+           md:top-46 py-[14px] px-[28px] md:px-[26px]'>
             <span>View Attendance</span>
           </button>
           {/* button 2 */}
@@ -76,7 +76,7 @@ const Members = () => {
               />
               <div className='flex flex-col w-[178px] h-[84px] gap-[2px] ml-7'>
               <p className='text-[20px]'>Ella Roberts</p>
-              <p className='text-[16px]'>Ellaroberts34@gmail.com</p>
+              <p className='text-[15px]'>Ellaroberts34@gmail.com</p>
               <p className='text-[16px]'>UI Engineer</p>
              </div>
              </div>
@@ -106,7 +106,7 @@ const Members = () => {
               <p>Name</p>
              </div>
              {/* item 2 */}
-             <div className='flex flex-row md:w-[177px] md:h-[32px] md:gap-[24px] text-[24px]'>
+             <div className='flex flex-row md:w-[177px] md:h-[32px] md:gap-[18px] text-[24px]'>
             <Image
               src="/Images/Checkbox.svg"
               alt=''
@@ -118,22 +118,22 @@ const Members = () => {
           </div>
 
             {/* schedule div 2 */}
-          <div className='hidden md:flex flex-col md:w-[185px] md:h-[136px] md:gap-[72px] text-white 
+          <div className='hidden md:flex flex-col md:w-[192px] md:h-[136px] md:gap-[72px] text-white 
           absolute top-[17.5rem] left-[15rem] opcaity-500'> 
             {/* item 1 */}
             <div className='flex flex-row md:gap-[24px] text-[24px]'>
               <p>Email Address</p>
              </div>
              {/* item 2 */}
-             <div className='flex flex-row md:w-[185px] md:h-[24px] text-[16px]'>
+             <div className='flex flex-row md:w-[190px] md:h-[24px] text-[15.5px]'>
               <p>Ellaroberts34@gmail.com</p>
              </div>
           </div>
            {/* schedule div 3 */}
-          <div className='hidden md:flex flex-col md:w-[160px] md:h-[136px] md:gap-[79px] text-white 
+          <div className='hidden md:flex flex-col md:w-[175px] md:h-[136px] md:gap-[77px] text-white 
           absolute top-[17.5rem] left-[31rem] opcaity-500'> 
             {/* item 1 */}
-            <div className='flex flex-row md:w-[160px] md:h-[32px] text-[24px]'>
+            <div className='flex flex-row md:w-[175px] md:h-[32px] text-[24px]'>
               <p>Wallet Address</p>
              </div>
              {/* item 2 */}
@@ -142,19 +142,19 @@ const Members = () => {
              </div>
           </div>
            {/* schedule div 4 */}
-          <div className='hidden md:flex flex-col md:w-[86px] md:h-[128px] md:gap-[72px] text-white 
+          <div className='hidden md:flex flex-col md:w-[96px] md:h-[136px] md:gap-[72px] text-white 
           absolute top-[17.5rem] left-[45rem] opcaity-500'> 
             {/* item 1 */}
             <div className='flex flex-row text-[24px]'>
               <p>Position</p>
              </div>
              {/* item 2 */}
-             <div className='flex flex-row md:w-[86px] md:h-[24px] text-[16px]'>
+             <div className='flex flex-row md:w-[96px] md:h-[24px] text-[16px]'>
               <p>UI Engineer</p>
              </div>
           </div>
           {/* schedule div 5 */}
-          <div className='hidden md:flex flex-col md:w-[125px] md:h-[128px] md:gap-[72px] text-white 
+          <div className='hidden md:flex flex-col md:w-[125px] md:h-[136px] md:gap-[72px] text-white 
           absolute top-[17.5rem] left-[56rem] opcaity-500'> 
             {/* item 1 */}
             <div className='flex flex-row md:gap-[24px] text-[24px]'>

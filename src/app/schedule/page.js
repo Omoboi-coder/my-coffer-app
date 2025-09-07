@@ -7,7 +7,7 @@ const Schedule = () => {
     <DashboardLayout>
         <section className='flex flex-col md:flex-wrap 2xl:mx-auto relative 
          w-full h-full md:h-[1000px] pb-[40rem] md:pb-0'>
-        <div className='hidden md:flex flex-col md:w-[185px] md:h-[112px] gap-[24px] mt-8'>
+        <div className='hidden md:flex flex-col md:w-[205px] md:h-[112px] gap-[24px] mt-8'>
             <div className='flex flex-row h-[36px] gap-1'>
             <Image
             src="Images/FourthCanvas - jpeg 0.svg"
@@ -40,7 +40,7 @@ const Schedule = () => {
               </div>
           </div>
           {/* sort div */}
-          <div className=' flex flex-row w-[104px] h-[40px] md:w-[189px] md:h-[48px] px-[12px] md:px-[48px]
+          <div className=' flex flex-row w-[104px] h-[40px] md:w-[189px] md:h-[48px] px-[8px] md:px-[48px]
           py-[8px] md:py-[12px] rounded-[8px] md:mt-10 mt-5 ml-[18.5rem] md:ml-0 border border-[#D9D9D9]'>
             <div className='flex flex-row gap-[8px]'>
             <span className='text-[14px] md:text-[16px] text-white opacity-80'>Sort by</span>
@@ -54,7 +54,7 @@ const Schedule = () => {
           </div>
           {/* button */}
           <div className='w-[196px] md:w-[243px] h-[52px] rounded-[8px] gap-[10px] absolute top-[40rem]
-           left-30 md:left-[49rem] md:absolute md:top-46 py-[14px] px-[28px] md:px-[28px] bg-[#63D9B9]'>
+           left-30 md:left-[49rem] md:absolute md:top-46 py-[14px] px-[25px] md:px-[28px] text-center bg-[#63D9B9]'>
             <span>Schedule Payment</span>
           </div>
           {/* mobile schedule div */}
@@ -95,7 +95,7 @@ const Schedule = () => {
               <p>Name</p>
              </div>
              {/* item 2 */}
-             <div className='flex flex-row md:w-[177px] md:h-[32px] md:gap-[24px] text-[24px]'>
+             <div className='flex flex-row md:w-[177px] md:h-[32px] md:gap-[18px] text-[24px]'>
             <Image
               src="/Images/Checkbox.svg"
               alt=''
@@ -107,8 +107,8 @@ const Schedule = () => {
           </div>
 
             {/* schedule div 2 */}
-          <div className='hidden md:flex flex-col md:w-[160px] md:h-[136px] md:gap-[72px] text-white 
-          absolute top-[17.5rem] left-[15rem] opcaity-500'> 
+          <div className='hidden md:flex flex-col md:w-[172px] md:h-[136px] md:gap-[72px] text-white 
+          absolute top-[17.6rem] left-[15rem] opcaity-500'> 
             {/* item 1 */}
             <div className='flex flex-row md:gap-[24px] text-[24px]'>
               <p>Wallet Address</p>
@@ -119,32 +119,32 @@ const Schedule = () => {
              </div>
           </div>
            {/* schedule div 3 */}
-          <div className='hidden md:flex flex-col md:w-[151px] md:h-[136px] md:gap-[72px] text-white 
-          absolute top-[17.5rem] left-[30rem] opcaity-500'> 
+          <div className='hidden md:flex flex-col md:w-[161px] md:h-[136px] md:gap-[72px] text-white 
+          absolute top-[17.6rem] left-[30rem] opcaity-500'> 
             {/* item 1 */}
             <div className='flex flex-row md:gap-[24px] text-[24px]'>
               <p>Date</p>
              </div>
              {/* item 2 */}
-             <div className='flex flex-row md:w-[150px] md:h-[24px] md:gap-[24px] text-[16px]'>
+             <div className='flex flex-row md:w-[160px] md:h-[24px] md:gap-[24px] text-[16px]'>
               <p>12th December 2023</p>
              </div>
           </div>
            {/* schedule div 4 */}
-          <div className='hidden md:flex flex-col md:w-[73px] md:h-[128px] md:gap-[72px] text-white 
-          absolute top-[17.5rem] left-[45rem] opcaity-500'> 
+          <div className='hidden md:flex flex-col md:w-[78px] md:h-[136px] md:gap-[72px] text-white 
+          absolute top-[17.6rem] left-[45rem] opcaity-500'> 
             {/* item 1 */}
             <div className='flex flex-row md:gap-[24px] text-[24px]'>
               <p>Time</p>
              </div>
              {/* item 2 */}
-             <div className='flex flex-row md:w-[74px] md:h-[24px]  text-[16px]'>
+             <div className='flex flex-row md:w-[78px] md:h-[24px]  text-[16px]'>
               <p>02: 00 pm</p>
              </div>
           </div>
           {/* schedule div 5 */}
-          <div className='hidden md:flex flex-col md:w-[125px] md:h-[128px] md:gap-[72px] text-white 
-          absolute top-[17.5rem] left-[56rem] opcaity-500'> 
+          <div className='hidden md:flex flex-col md:w-[125px] md:h-[136px] md:gap-[72px] text-white 
+          absolute top-[17.6rem] left-[56rem] opcaity-500'> 
             {/* item 1 */}
             <div className='flex flex-row md:gap-[24px] text-[24px]'>
               <p>Salary</p>

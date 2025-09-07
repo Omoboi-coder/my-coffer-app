@@ -16,22 +16,22 @@ const Footer = () => {
         className="md:w-[227px] md:h-[48px] mt-10 ml-10"
         />
         {/* input div */}
-        <div className='flex flex-col absolute top-32 left-10 w-[352px] h-[200px] md:w-[450px] md:h-[270px] space-y-13'>
+        <div className='flex flex-col absolute top-32 left-10 w-[352px] h-[200px] md:w-[460px] md:h-[270px] space-y-13'>
            <div className='flex flex-col gap-4'>
             <h5 className='text-[16px] text-white shadow'>Stay updated with</h5>
-            <h2 className='w-[450px] text-[48px] text-white leading-14'>Payclick by signing up for our newsletter</h2>
+            <h2 className='w-[460px] text-[45px] text-white leading-14'>Payclick by signing up for our newsletter</h2>
             </div> 
             <input type="text" placeholder='Email address'
-            className='relative w-[352px] h-[56px] md:w-[432px] md:min-h-[64px] bg-[#63D9B9] rounded-[36px]
+            className='relative w-[352px] h-[56px] md:w-[452px] md:min-h-[64px] bg-[#63D9B9] rounded-[36px]
             border-2 border-white placeholder:text-[#000000] placeholder:text-[14px] px-4 py-2'
             />
-            <button className='absolute top-51 left-65 w-[100px] h-[40px] md:w-[174px] md:h-[64px] bg-[#010101] rounded-[36px] 
+            <button className='absolute top-51 left-69.5 w-[100px] h-[40px] md:w-[174px] md:h-[64px] bg-[#010101] rounded-[36px] 
             border border-y-white border-r-white text-[14px] md:text-[16px] py-[20px] text-[#63D9B9]'>
             Subscribe
             </button>   
         </div>
         {/* Links */}
-        <div className='flex flex-row md:w-[755px] md:h-[176px] gap-[35px] mt-2 md:mt-10 ml-0 md:ml-[18rem] '>
+        <div className='flex flex-row md:w-[775px] md:h-[176px] gap-[35px] mt-2 md:mt-10 ml-0 md:ml-[18rem] '>
             {/* col 1 */}
             <div className='flex flex-col md:w-[116px] md:h-[176px] gap-6 text-white'>
                 <h3 className='text-[32px]'>Explore</h3>
@@ -80,7 +80,7 @@ const Footer = () => {
 
         </div>
         {/* connect & social media*/}
-        <div className='flex flex-row absolute top-[22.3rem] left-[34.7rem] w-[230px] h-[24px] text-white gap-6'>
+        <div className='flex flex-row absolute top-[22.3rem] left-[34.7rem] w-[240px] h-[24px] text-white gap-6'>
             <p>Connect with us</p>
         {/* social icons */}
             <div className='flex flex-row w-[80px] h-[16px] gap-4 mt-1'>
@@ -130,7 +130,7 @@ const Footer = () => {
         className="w-[114px] h-[24px]"
         />
           {/* connect & social media*/}
-        <div className='flex flex-row w-[170px] h-[24px] pt-1 text-white gap-4'>
+        <div className='flex flex-row w-[170px] h-[24px] pt-1 text-white gap-2'>
             <p className='text-[12px] mt-0.5'>Connect with us</p>
         {/* social icons */}
             <div className='flex flex-row w-[66px] h-[12px] gap-4 mt-1'>
@@ -223,8 +223,8 @@ const Footer = () => {
         {/* footer */}
         <div className='flex flex-row absolute bottom-4 w-full h-[24px] text-white text-[12px]
         gap-4 border-1 border-t-[#4E4E4E] border-x-0 border-b-0 '>
-            <p className='mt-1 ml-[1.5rem]'>&copy; Payclick 2025 All rights reserved.</p>
-            <p className='mt-1'>Privacy Policy</p>
+            <p className='pt-1 ml-[1.5rem]'>&copy; Payclick 2025 All rights reserved.</p>
+            <p className='pt-1'>Privacy Policy</p>
             
          
 

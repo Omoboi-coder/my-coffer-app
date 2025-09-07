@@ -60,11 +60,11 @@ const ContactUs = () => {
             />
 
         {/* item 1 desktop*/}
-        <div className='hidden md:flex flex-col w-[352px] h-[380px] md:w-[550px] md:h-[384px] md:gap-7 
-        mt-2 md:mt-[15rem] md:ml-[9rem] z-10'>
+        <div className='hidden md:flex flex-col w-[352px] h-[380px] md:w-[570px] md:h-[384px] md:gap-7 
+        mt-2 md:mt-[15rem] md:ml-[7rem] z-10'>
           <h3 className='md:text-[30px]'>Contact</h3>
           <div className='flex flex-col gap-4'>
-              <h2 className='text-[58px] w-[540px] h-[80px]'>Get in touch with us</h2>
+              <h2 className='text-[58px] w-[570px] h-[80px]'>Get in touch with us</h2>
               <p className='w-[505px] h-[64px] text-[20px]'>Have questions or need assistance?
                  Reach out to our dedicated support team</p>
                  </div>

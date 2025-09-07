@@ -20,9 +20,9 @@ return (
             onClick={toggleMenu}
         />
         {openMenu && (
-            <div className="w-[265px] h-[350px] absolute top-15 right-2 bg-[#282828] shadow-lg rounded-xl p-2 z-50">
+            <div className="max-w-[80%] h-[360px] absolute top-15 left-0 right-0 mx-auto bg-[#282828] shadow-lg rounded-xl p-10 z-50">
                 {/* address */}
-                <div className="flex flex-row w-[170px] h-[48px] text-[14px] text-white rounded-[8px] mt-5 ml-5 py-3 px-3 gap-2 bg-[#4A4A4A]">
+                <div className="flex flex-row w-[170px] h-[48px] text-[14px] text-white rounded-[8px] mt-2 ml-5 py-3 px-3 gap-2 bg-[#4A4A4A]">
                     <Image
                         src="/Images/MetaMask - jpeg 0.svg"
                         alt=""
@@ -71,7 +71,7 @@ return (
                     </div>
                 </div>
                  {/* attendance link */}
-                  <div className='flex flex-row w-[170px] h-[20px] ml-5 mt-6 justify-between'>
+                  <div className='flex flex-row w-[170px] h-[20px] ml-5 mt-4 justify-between'>
                   <p className=' text-[14px] text-white opacity-85'>Attendance Link</p>
                   <Image
                   src="/Images/copy.svg"
