@@ -13,7 +13,6 @@ const Navbar = () => {
         pt-15 px-8 md:pt-20 md:px-20 items-end">
           
           {/* nav Logo */}
-          <Link href="/">
           <div className="flex flex-row ">
             <Image
               src="/Images/Logo+Name.svg"
@@ -23,7 +22,6 @@ const Navbar = () => {
               className="w-[170px] h-[36px] md:w-[227px] md:h-[48px]"
              />
           </div>
-          </Link>
           {/* HamburgerMenu  */}
           <Image
             src="/Images/menu.svg"

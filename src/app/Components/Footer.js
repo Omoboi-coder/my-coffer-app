@@ -120,7 +120,7 @@ const Footer = () => {
         <div className='flex md:hidden flex-col relative mx-auto w-full h-[478px] gap-10 py-4'>
        {/* mobile footer */}
        <div className='flex flex-col mx-auto w-[382px] h-[407px]'>
-        <div className='flex flex-row w-[380px] h-[24px] space-x-24 mx-auto '>
+        <div className='flex flex-row w-[380px] h-[24px] space-x-20 mx-auto '>
         {/* Logo */}
         <Image
         src="/Images/Logo+Name.svg"
@@ -130,7 +130,7 @@ const Footer = () => {
         className="w-[114px] h-[24px]"
         />
           {/* connect & social media*/}
-        <div className='flex flex-row w-[170px] h-[24px] pt-1 text-white gap-2'>
+        <div className='flex flex-row w-[185px] h-[24px] pt-1 text-white gap-3'>
             <p className='text-[12px] mt-0.5'>Connect with us</p>
         {/* social icons */}
             <div className='flex flex-row w-[66px] h-[12px] gap-4 mt-1'>
@@ -223,12 +223,10 @@ const Footer = () => {
         {/* footer */}
         <div className='flex flex-row absolute bottom-4 w-full h-[24px] text-white text-[12px]
         gap-4 border-1 border-t-[#4E4E4E] border-x-0 border-b-0 '>
-            <p className='pt-1 ml-[1.5rem]'>&copy; Payclick 2025 All rights reserved.</p>
-            <p className='pt-1'>Privacy Policy</p>
+            <p className='mt-2 ml-5.5'>&copy; Payclick 2025 All rights reserved.</p>
+            <p className='mt-2'>Privacy Policy</p>
             
          
-
-
         </div>
     </div>
 

@@ -1,17 +1,24 @@
 import React from 'react'
 import Image from 'next/image'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const Features = () => {
+  const [headingRef, headingVisible] = useScrollAnimation()
+  const [box1Ref, box1Visible] = useScrollAnimation({ rootMargin: '-100px 0px' })
+  const [box2Ref, box2Visible] = useScrollAnimation({ rootMargin: '-100px 0px' })
+  const [box3Ref, box3Visible] = useScrollAnimation({ rootMargin: '-100px 0px' })
+  const [box4Ref, box4Visible] = useScrollAnimation({ rootMargin: '-100px 0px' })
+
   return (
     <section id='features' className='bg-coffer-dark overflow-hidden'>
         {/* flex container */}
         <div className='flex flex-col w-[430px] h-[1040px] md:w-[1728px] md:h-[615px] mx-auto
         relative text-white z-10'>
             
-            {/* Custom background image overlay */} 
+            {/* Background overlays remain the same */}
             <div 
-              className="absolute top-[10px] right-[20px] md:left-[65rem] 2xl:left-[75rem]
-               z-0 opacity-100 w-[279px] h-[269px]"
+              className="absolute top-[40px] md:top-[10px] right-[20px] md:left-[65rem] 2xl:left-[75rem]
+               z-0 opacity-100 w-[120px] h-[116px] md:w-[279px] md:h-[269px]"
               style={{
                 backgroundImage: "url('/Images/LooperGroup.svg')",
                 backgroundSize: 'contain',    
@@ -19,9 +26,8 @@ const Features = () => {
                 backgroundPosition: 'center'
               }}
             />
-            {/* Custom background image overlay*/} 
             <div 
-              className="absolute top-[350px] left-[20px] md:left-[50px] 2xl:left-[15rem] w-[245px] h-[262px]"
+              className="absolute top-[888px] md:top-[350px] left-[20px] md:left-[50px] 2xl:left-[15rem] w-[120px] h-[128px] md:w-[245px] md:h-[262px]"
               style={{
                 backgroundImage: "url('/Images/Group 9.svg')",
                 backgroundSize: 'contain',    
@@ -29,17 +35,24 @@ const Features = () => {
                 backgroundPosition: 'center'
               }}
             />    
-            {/* Heading */}
-            <h3 className='w-fit md:w-[496px] text-[20px] md:text-[45px] h-[52px] mt-10 md:mt-10 ml-6
-             md:ml-5 2xl:ml-50'>How Payclick Works</h3>   
-            {/* outer div*/}
+
+            {/* Animated Heading */}
+            <h3 ref={headingRef} className={`w-fit md:w-[496px] text-[20px] md:text-[45px] h-[52px] mt-10 md:mt-10 ml-6
+             md:ml-5 2xl:ml-50 transition-all duration-800 ease-out
+             ${headingVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+               How Payclick Works
+            </h3>   
+
+            {/* Features Grid */}
             <div className='flex flex-col md:flex-row w-[382px] h-[848px] md:w-[1305px] md:h-[360px]
              min-[414px]:ml-4 min-[430px]:ml-6 2xl:mx-5 md:mx-4 gap-4 md:gap-3
             mt-8 md:mt-25 opacity-80'>
-            {/* box 1  */}
-            <div className='flex flex-col w-[382px] h-[200px] md:w-[370px] md:h-[360px] border justify-between
-             text-white
-             bg-feature-gradient'>
+
+            {/* Animated Box 1 */}
+            <div ref={box1Ref} className={`flex flex-col w-[382px] h-[200px] md:w-[370px] md:h-[360px] border justify-between
+             text-white bg-feature-gradient transition-all duration-700 ease-out
+             hover:scale-105 hover:shadow-xl hover:shadow-white/10
+             ${box1Visible ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-8 -rotate-1'}`}>
            <Image
               src="/Images/quill_sign.svg"
               alt="Quill Sign Image"
@@ -55,15 +68,16 @@ const Features = () => {
               Sign up on Payclick and enjoy a free trial 
              to explore all the features</p>
              </div>
-                </div>
+            </div>
 
-                {/* box 2  */}
-            <div className='flex flex-col w-[382px] h-[200px] md:w-[380px] md:h-[360px] 
-            border justify-between text-white
-             bg-feature-gradient'>
+            {/* Animated Box 2 */}
+            <div ref={box2Ref} className={`flex flex-col w-[382px] h-[200px] md:w-[380px] md:h-[360px] 
+            border justify-between text-white bg-feature-gradient transition-all duration-700 delay-100 ease-out
+            hover:scale-105 hover:shadow-xl hover:shadow-white/10
+            ${box2Visible ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-8 rotate-1'}`}>
            <Image
               src="/Images/layer-group-solid.svg"
-              alt="Quill Sign Image"
+              alt="Layer Group Image"
               width={56}
               height={56}
               className="w-[24px] h-[24px] md:w-[56px] md:h-[56px] mt-4 ml-3 "
@@ -76,15 +90,16 @@ const Features = () => {
                existing payroll system. 
                 Our user-friendly interface give a smooth transition</p>
              </div>
-                </div>
+            </div>
 
-                {/* box 3  */}
-            <div className='flex flex-col w-[382px] h-[200px] md:w-[380px] md:h-[360px] border justify-between
-             text-white
-             bg-feature-gradient'>
+            {/* Animated Box 3 */}
+            <div ref={box3Ref} className={`flex flex-col w-[382px] h-[200px] md:w-[380px] md:h-[360px] border justify-between
+             text-white bg-feature-gradient transition-all duration-700 delay-200 ease-out
+             hover:scale-105 hover:shadow-xl hover:shadow-white/10
+             ${box3Visible ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-8 -rotate-1'}`}>
            <Image
               src="/Images/game-icons_processor.svg"
-              alt="Quill Sign Image"
+              alt="Processor Image"
               width={64}
               height={64}
               className="w-[24px] h-[24px] md:w-[64px] md:h-[64px] mt-4 ml-3 "
@@ -97,15 +112,16 @@ const Features = () => {
               for all your employees. 
                 Our system is designed to be efficient and user-friendly.</p>
              </div>
-                </div>
+            </div>
 
-                {/* box 4  */}
-            <div className='flex flex-col w-[382px] h-[200px] md:w-[380px] md:h-[360px] border justify-between
-             text-white
-             bg-feature-gradient'>
+            {/* Animated Box 4 */}
+            <div ref={box4Ref} className={`flex flex-col w-[382px] h-[200px] md:w-[380px] md:h-[360px] border justify-between
+             text-white bg-feature-gradient transition-all duration-700 delay-300 ease-out
+             hover:scale-105 hover:shadow-xl hover:shadow-white/10
+             ${box4Visible ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-8 rotate-1'}`}>
            <Image
               src="/Images/bezier-curve-solid.svg"
-              alt="Quill Sign Image"
+              alt="Bezier Curve Image"
               width={64}
               height={51}
               className="w-[24px] h-[19.2px] md:w-[64px] md:h-[51px] mt-4 ml-3 "
@@ -116,9 +132,9 @@ const Features = () => {
              real-time updates</p>
              <p className='text-[14px] md:text-[15px]'>Stay in the loop with timely notifications
                on salary processing, 
-                ensuring you&#39;re always aware of payment status</p>
+                ensuring you&apos;re always aware of payment status</p>
              </div>
-                </div>
+            </div>
             </div>
         </div>
     </section>
