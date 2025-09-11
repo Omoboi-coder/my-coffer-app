@@ -27,7 +27,7 @@ const ContactUs = () => {
       text-white relative z-10'>
         
         {/* Background image remains the same */}
-        <div className="hidden absolute z-0 opacity-50 md:right-[22%] 2xl:right-[12%] pointer-events-none"
+        <div className="hidden md:flex absolute z-0 opacity-50 md:right-[22%] 2xl:right-[12%] pointer-events-none"
           style={{
             backgroundImage: "url('/Images/Box_Alternating 1.svg')",
             backgroundSize: 'contain',    

@@ -56,7 +56,7 @@ const Hero = () => {
               <button ref={buttonRef} className={`bg-[#63D9B9] w-[189px] h-[56px] gap-[10px] rounded-[8px]
                text-[16px] text-[#010101] cursor-pointer transition-all duration-600 delay-600 ease-out
                hover:scale-105 hover:shadow-lg hover:shadow-[#63D9B9]/25
-               ${buttonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+               ${buttonVisible ? 'opacity-100 translate-y-0' : 'opacity-50 translate-y-4'}`}>
                   Launch App
               </button>
               </Link>
