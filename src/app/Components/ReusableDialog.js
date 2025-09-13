@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import { styled } from '@mui/material/styles'
 import Dialog from '@mui/material/Dialog'
@@ -11,6 +10,7 @@ import Typography from '@mui/material/Typography'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 
+// Styled Components
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
     padding: theme.spacing(3),
@@ -18,19 +18,32 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     color: '#ffffff',
     fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
     borderTop: 'none !important',
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(2),
+    },
   },
   '& .MuiDialogActions-root': {
     padding: theme.spacing(2),
     backgroundColor: '#1a1a1a',
     fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(1),
+    },
   },  
   '& .MuiPaper-root': {
     backgroundColor: '#282828',
     borderRadius: '8px',
     border: '1px solid #282828',               
     minWidth: '532px',            
-    minHeight: '514px',           
+    maxHeight: '514px',           
     fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
+    [theme.breakpoints.down('sm')]: {
+      minWidth: '300px',
+      minHeight: '400px',
+      margin: '16px',
+      width: 'calc(100% - 32px)',
+      maxWidth: '400px',
+    },
   },
   '& .MuiDialogTitle-root': {
     backgroundColor: '#1a1a1a',
@@ -39,16 +52,23 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     fontWeight: 600,
     fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
     borderBottom: 'none !important',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '20px',
+      padding: theme.spacing(2),
+    },
   },
+  // Target the divider specifically
   '& hr': {
     display: 'none !important',
   },
   '& .MuiDivider-root': {
     display: 'none !important',
   },
+  // Apply font to all Typography components within dialog
   '& .MuiTypography-root': {
     fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
   },
+  // Apply font to input fields
   '& .MuiInputBase-root': {
     fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
   },
@@ -62,8 +82,9 @@ const StyledTextField = styled(TextField)({
     backgroundColor: '#2a2a2a',
     borderRadius: '8px',
     fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
+    height: '48px', // Set fixed height
     '& fieldset': {
-      borderColor: '#F1F1F1',
+      borderColor: '#404040',
     },
     '&:hover fieldset': {
       borderColor: '#63D9B9',
@@ -82,12 +103,14 @@ const StyledTextField = styled(TextField)({
   '& .MuiOutlinedInput-input': {
     color: '#ffffff',
     fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
+    padding: '8px 12px', // Reduce padding
+    fontSize: '14px', // Optional: smaller font size
   },
 })
 
 const StyledButton = styled(Button)({
   backgroundColor: '#63D9B9',
-  color: '#ffffff',
+  color: 'black',
   borderRadius: '8px',
   textTransform: 'none',
   fontSize: '16px',
@@ -98,79 +121,92 @@ const StyledButton = styled(Button)({
   },
 })
 
-// Simple reusable component
-const CustomDialog = ({ 
+// Reusable Dialog Component
+const ReusableDialog = ({ 
   open, 
   onClose, 
   title, 
   subtitle, 
   children, 
-  buttonText = "Submit",
+  buttonText, 
   onSubmit,
-  customStyles = {} // Add this prop
+  buttonProps = {},
+  titleStyle = {},
+  contentStyle = {},   
+  buttonStyle = {},    // Added default empty object
+  customTitleComponent = null,
 }) => {
-  
   return (
     <BootstrapDialog
       onClose={onClose}
       open={open}
       maxWidth="sm"
-      sx={customStyles} // Apply custom styles
     >
-      <DialogTitle sx={{ m: 0, p: 3 }}>
-        {title}
-        {subtitle && (
-          <Typography variant="subtitle1" sx={{ 
-            color: '#FEFEFE', 
-            width: '300px', 
-            fontWeight: 400, 
-            mt: 1 
-          }}>
-            {subtitle}
-          </Typography>
+      <DialogTitle sx={{ pl: 5, ...titleStyle }}>
+        {customTitleComponent ? (
+          customTitleComponent
+        ) : (
+          <>
+            {title}
+            {subtitle && (
+              <Typography variant="subtitle1" sx={{ 
+                color: '#B6B6B6', 
+                width: '300px', 
+                fontWeight: 400, 
+               
+              }}>
+                {subtitle}
+              </Typography>
+            )}
+          </>
         )}
       </DialogTitle>
       
       <IconButton
+        aria-label="close"
         onClick={onClose}
         sx={{
           position: 'absolute',
           right: 8,
           top: 8,
           color: '#B6B6B6',
+          '&:hover': {
+            backgroundColor: '#2a2a2a',
+          },
         }}
       >
         <CloseIcon />
       </IconButton>
       
-      <DialogContent>
-        <div style={{ 
-          display: 'flex', 
-          flexDirection: 'column', 
-          width: '458px', 
-          gap: '24px', 
-          margin: '25px auto 0 auto' 
-        }}>
-          {children}
-        </div>
+      <DialogContent sx={contentStyle}>
+        {children}
       </DialogContent>
       
       <DialogActions>
         <StyledButton 
           onClick={onSubmit}
           sx={{ 
-            minWidth: '458px',
+            // Default button styles
+            minWidth: { xs: '365px', sm: '458px' },
+            maxWidth: { xs: '320px', sm: 'none' },
             minHeight: '52px',
-            margin: 'auto',
-            marginBottom: '25px',
+            border: '8px',
+            margin: { xs: '0 auto 16px auto', sm: 'auto' },
+            marginBottom: { xs: '16px', sm: '10px' },
+            width: { xs: 'auto', sm: 'auto' },
+            display: 'block',
+            // Apply custom buttonStyle (this will override defaults)
+            ...buttonStyle,
+            // Apply buttonProps last (highest priority)
+            ...buttonProps
           }}
         >
           {buttonText}
         </StyledButton>
       </DialogActions>
     </BootstrapDialog>
-  )
-}
+  );
+};
 
+export default ReusableDialog
 export { StyledTextField, StyledButton }
-export default CustomDialog

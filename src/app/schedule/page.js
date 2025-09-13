@@ -2,35 +2,211 @@
 import React, { useState } from 'react'
 import DashboardLayout from '../Components/DashboardLayout'
 import Image from 'next/image'
-import CustomDialog, { StyledTextField } from '../Components/CustomDialog'
+import ReusableDialog, { StyledTextField } from '../Components/ReusableDialog'
 import { Typography } from '@mui/material'
 import { InputAdornment } from '@mui/material';
 import { Menu, MenuItem } from '@mui/material'
 
 const Schedule = () => {
   const [open, setOpen] = useState(false)
+  const [formData, setFormData] = useState({
+    walletAddress: '',
+    date: '',
+    time: ''
+  })
 
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
   const handleSubmit = () => {
     // Add your submit logic here
+    console.log('Form submitted:', formData)
     handleClose()
   }
 
-const [anchorEl, setAnchorEl] = useState(null)
-const menuOpen = Boolean(anchorEl)
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }))
+  }
 
-const handleMenuClick = (event) => {
-  setAnchorEl(event.currentTarget)
-}
+  const [anchorEl, setAnchorEl] = useState(null)
+  const menuOpen = Boolean(anchorEl)
 
-const handleMenuClose = () => {
-  setAnchorEl(null)
-}
+  const handleMenuClick = (event) => {
+    setAnchorEl(event.currentTarget)
+  }
+
+  const handleMenuClose = () => {
+    setAnchorEl(null)
+  }
+
+  // Dialog Configuration for ReusableDialog
+  const titleStyle = {
+    fontSize: { xs: '24px', md: '28px' },
+    paddingLeft: { xs: '24px', md: '35px' },
+    paddingRight: { xs: '24px', md: '35px' },
+    lineHeight: { xs: 1.2, md: 1.3 },
+    '& .MuiTypography-subtitle1': {
+      width: { xs: '280px', md: '303px' },
+      fontSize: { xs: '12px', md: '14px' },
+      lineHeight: { xs: 1.1, md: 1.2 },
+      marginTop: { xs: '4px', md: '6px' },
+      marginBottom: 0,
+    }
+  }
+  
+  const contentStyle = {
+    paddingLeft: { xs: '24px', md: '35px' },
+    paddingRight: { xs: '24px', md: '35px' },
+    paddingTop: '0px',
+    paddingBottom: { xs: '16px', md: '24px' },
+  }
+  
+  const buttonStyle = {
+    minWidth: { xs: '320px', md: '458px' },
+    maxWidth: { xs: '320px', md: '458px' },
+    width: { xs: '320px', md: '458px' },
+    minHeight: '52px',
+  }
+
+  // Schedule Dialog Content
+  const ScheduleDialogContent = (
+    <div style={{
+      display: 'flex', 
+      flexDirection: 'column', 
+      gap: '16px',
+      marginTop: '-20px',
+      width: '100%'
+    }}>
+      {/* Wallet Address Field */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Typography sx={{ 
+          color: '#B6B6B6', 
+          fontSize: { xs: '11px', md: '12px' }
+        }}>
+          Wallet Address
+        </Typography>
+        <StyledTextField
+          type="text"
+          value={formData.walletAddress}
+          onChange={(e) => handleInputChange('walletAddress', e.target.value)}
+          placeholder="Asd7383ndjhdj"
+          style={{ width: '100%' }}
+          sx={{
+            '& .MuiOutlinedInput-root': {
+              height: { xs: '44px', md: '48px' },
+              fontSize: { xs: '14px', md: '16px' }
+            }
+          }}
+        />
+      </div>
+
+      {/* Date and Time Row */}
+      <div style={{ 
+        display: 'flex', 
+        flexDirection: 'row',
+        width: '100%',
+        gap: '24px'
+      }}>
+        {/* Date Field */}
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          gap: '8px',
+          width: '50%'
+        }}>
+          <Typography sx={{ 
+            color: '#B6B6B6', 
+            fontSize: { xs: '11px', md: '12px' }
+          }}>
+            Date
+          </Typography>
+          <StyledTextField
+            value={formData.date}
+            onChange={(e) => handleInputChange('date', e.target.value)}
+            placeholder="11/12/2023"
+            style={{ width: '100%' }}
+            sx={{
+              '& .MuiOutlinedInput-root': {
+                height: { xs: '44px', md: '48px' },
+                fontSize: { xs: '14px', md: '16px' }
+              }
+            }}
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <Image 
+                      src="/Images/calendar-2.svg" 
+                      alt="Calendar" 
+                      width={24}
+                      height={24}
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => {
+                        console.log('Calendar clicked');
+                        // Add date picker logic here
+                      }}
+                    />
+                  </InputAdornment>
+                ),
+              },
+            }}
+          />
+        </div>
+
+        {/* Time Field */}
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          gap: '8px',
+          width: '50%'
+        }}>
+          <Typography sx={{ 
+            color: '#B6B6B6', 
+            fontSize: { xs: '11px', md: '12px' }
+          }}>
+            Time
+          </Typography>
+          <StyledTextField
+            value={formData.time}
+            onChange={(e) => handleInputChange('time', e.target.value)}
+            placeholder="02:00 pm"
+            style={{ width: '100%' }}
+            sx={{
+              '& .MuiOutlinedInput-root': {
+                height: { xs: '44px', md: '48px' },
+                fontSize: { xs: '14px', md: '16px' }
+              }
+            }}
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <Image 
+                      src="/Images/clock.svg" 
+                      alt="Clock" 
+                      width={24}
+                      height={24}
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => {
+                        console.log('Clock clicked');
+                        // Add time picker logic here
+                      }}
+                    />
+                  </InputAdornment>
+                ),
+              },
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  )
 
   return (
     <DashboardLayout>
-        <section className='flex flex-col md:flex-wrap 2xl:mx-auto relative 
+      <section className='flex flex-col md:flex-wrap 2xl:mx-auto relative 
          w-full h-full md:h-[1000px] pb-[40rem] md:pb-0'>
         <div className='hidden md:flex flex-col md:w-[205px] md:h-[112px] gap-[24px] mt-8'>
             <div className='flex flex-row h-[36px] gap-1'>
@@ -196,133 +372,43 @@ const handleMenuClose = () => {
           </div>
         </section>
 
-      <CustomDialog
-  open={open}
-  onClose={handleClose}
-  title="Schedule Payment"
-  subtitle="Employee salaries will be sent out on the scheduled date and time"
-  onSubmit={handleSubmit}
-  buttonText="Schedule Now"
-  customStyles={{
-    // Dialog container
-    '& .MuiPaper-root': {
-      minWidth: '530px',
-      minHeight: '514px',
-      maxWidth: '532px',
-    },
-    // Title styling
-    '& .MuiDialogTitle-root': {
-      fontSize: '28px',
-    },
-    // Subtitle styling
-    '& .MuiDialogTitle-root .MuiTypography-subtitle1': {
-      width: '303px',
-      fontSize: '14px',
-    },
-    // Content area width
-    '& .MuiDialogContent-root > div': {
-      width: '458px',
-    },
-    // Button width
-    '& .MuiDialogActions-root .MuiButton-root': {
-      minWidth: '458px ',
-      height:'52px',
-    }
-  }}
->
-  {/* Individual field customizations */}
-  <div style={{display:'flex', flexDirection:'column', gap:'16px', marginTop:'-25px' }}>
-   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <Typography sx={{ color: '#B6B6B6', fontSize: '12px' }}>
-            Wallet Address
-          </Typography>
-          <StyledTextField
-            type="number"
-            value=''
-            placeholder="Asd7383ndjhdj"
-          />
-        </div>
-  <div style={{ display: 'flex', flexDirection: 'row', width:'458px', height:'74px', gap: '24px' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-     <Typography sx={{ color: '#B6B6B6', fontSize: '12px' }}>
-    Date
-  </Typography>
-     <StyledTextField 
-  placeholder="11/12/2023" 
-  sx={{ width: '217px', height:'48px' }}
-  slotProps={{
-    input: {
-    endAdornment: (
-      <InputAdornment position="end">
-        <Image 
-          src="/Images/calendar-2.svg" 
-          alt="Calendar" 
-          width='24'
-          height='24'
-           style={{ width: '24px', height: '24px', cursor: 'pointer' }}
-    onClick={() => {
-      // Your date picker logic here
-      console.log('Calendar clicked');
-    }}
-  />
-</InputAdornment>
-    ),
-  },
-  }}
-/>
-</div>
-     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <Typography sx={{ color: '#B6B6B6', fontSize: '12px' }}>
-            Time
-          </Typography>
-  <StyledTextField 
-    placeholder="02:00 pm" 
-    variant="outlined" 
-    sx={{ idth: '217px', height:'48px' }}
-    slotProps={{
-    input: {
-    endAdornment: (
-      <InputAdornment position="end">
-        <Image 
-          src="/Images/clock.svg" 
-          alt="Calendar" 
-          width='24'
-          height='24'
-           style={{ width: '24px', height: '24px', cursor: 'pointer' }}
-    onClick={() => {
-      // Your date picker logic here
-      console.log('Clock clicked');
-    }}
-  />
-</InputAdornment>
-    ),
-  },
-  }}
-  />
-  </div>
-  </div>
-</div>
-</CustomDialog>
-<Menu
-  anchorEl={anchorEl}
-  open={menuOpen}
-  onClose={handleMenuClose}
-  PaperProps={{
-    sx: {
-      backgroundColor: '#282828',
-      color: 'white',
-      '& .MuiMenuItem-root': {
-        '&:hover': {
-          backgroundColor: '#282828',
-        }
-      }
-    }
-  }}
->
-  <MenuItem onClick={handleMenuClose}>Sort by Date</MenuItem>
-  <MenuItem onClick={handleMenuClose}>Sort by Name</MenuItem>
-  <MenuItem onClick={handleMenuClose}>Sort by Amount</MenuItem>
-</Menu>
+      {/* Refactored ReusableDialog */}
+      <ReusableDialog
+        open={open}
+        onClose={handleClose}
+        title="Schedule Payment"
+        subtitle="Employee salaries will be sent out on the scheduled date and time"
+        onSubmit={handleSubmit}
+        buttonText="Schedule Now"
+        titleStyle={titleStyle}
+        contentStyle={contentStyle}
+        buttonStyle={buttonStyle}
+      >
+        {ScheduleDialogContent}
+      </ReusableDialog>
+
+      <Menu
+        anchorEl={anchorEl}
+        open={menuOpen}
+        onClose={handleMenuClose}
+        slotProps={{
+          paper: {
+            sx: {
+              backgroundColor: '#282828',
+              color: 'white',
+              '& .MuiMenuItem-root': {
+                '&:hover': {
+                  backgroundColor: '#282828',
+                }
+              }
+            }
+          }
+        }}
+      >
+        <MenuItem onClick={handleMenuClose}>Sort by Date</MenuItem>
+        <MenuItem onClick={handleMenuClose}>Sort by Name</MenuItem>
+        <MenuItem onClick={handleMenuClose}>Sort by Amount</MenuItem>
+      </Menu>
     </DashboardLayout>
   )
 }

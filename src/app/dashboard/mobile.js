@@ -1,109 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import Button from '@mui/material/Button'
-import { styled } from '@mui/material/styles'
-import Dialog from '@mui/material/Dialog'
-import DialogTitle from '@mui/material/DialogTitle'
-import DialogContent from '@mui/material/DialogContent'
-import DialogActions from '@mui/material/DialogActions'
-import IconButton from '@mui/material/IconButton'
-import CloseIcon from '@mui/icons-material/Close'
 import Typography from '@mui/material/Typography'
-import TextField from '@mui/material/TextField'
-
-// Styled dialog component
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialog-paper': {
-    backgroundColor: '#282828',
-    borderRadius: '8px',
-    border: '1px solid #282828',               
-    minWidth: '300px',            // Adjusted for mobile               
-    minHeight: '400px',           // Adjusted for mobile
-    margin: '16px',               // Add margin for mobile
-    fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',  // Use your Space Grotesk variable
-  },
-  '& .MuiDialogTitle-root': {
-    backgroundColor: '#1a1a1a',
-    color: '#ffffff',
-    fontSize: '20px',             // Slightly smaller for mobile
-    fontWeight: 600,
-    borderBottom: 'none !important',        // Force remove bottom border from title
-    fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',  // Use your Space Grotesk variable
-    '&::after': {
-      display: 'none',           // Remove any pseudo-element dividers
-    },
-  },
-  '& .MuiDialogContent-root': {
-    padding: theme.spacing(3),
-    backgroundColor: '#1a1a1a',
-    color: '#ffffff',
-    borderTop: 'none !important',           // Force remove top border
-    fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',  // Use your Space Grotesk variable
-    '&::before': {
-      display: 'none',           // Remove any pseudo-element dividers
-    },
-  },
-  '& .MuiDialogActions-root': {
-    padding: theme.spacing(2),
-    backgroundColor: '#1a1a1a',
-    fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',  // Use your Space Grotesk variable
-  },
-  // Target the divider specifically
-  '& hr': {
-    display: 'none !important',
-  },
-  '& .MuiDivider-root': {
-    display: 'none !important',
-  },
-  // Apply font to all Typography components within dialog
-  '& .MuiTypography-root': {
-    fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
-  },
-  // Apply font to input fields
-  '& .MuiInputBase-root': {
-    fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
-  },
-  '& .MuiInputLabel-root': {
-    fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
-  },
-}))
-
-const StyledTextField = styled(TextField)({
-  '& .MuiOutlinedInput-root': {
-    backgroundColor: '#2a2a2a',
-    borderRadius: '8px',
-    '& fieldset': {
-      borderColor: '#404040',
-    },
-    '&:hover fieldset': {
-      borderColor: '#63D9B9',
-    },
-    '&.Mui-focused fieldset': {
-      borderColor: '#63D9B9',
-    },
-  },
-  '& .MuiInputLabel-root': {
-    color: '#B6B6B6',
-    '&.Mui-focused': {
-      color: '#63D9B9',
-    },
-  },
-  '& .MuiOutlinedInput-input': {
-    color: '#ffffff',
-  },
-})
-
-const StyledButton = styled(Button)({
-  backgroundColor: '#63D9B9',
-  color: '#ffffff',
-  borderRadius: '8px',
-  textTransform: 'none',
-  fontSize: '16px',
-  fontWeight: 600,
-  '&:hover': {
-    backgroundColor: '#52c7a5',
-  },
-})
+import ReusableDialog, { StyledTextField } from '../Components/ReusableDialog'
 
 const Mobile = () => {
   const [open, setOpen] = useState(false)
@@ -122,9 +20,7 @@ const Mobile = () => {
   }
 
   const handleFundAccount = () => {
-    // Handle the fund account logic here
     console.log('Funding account with:', { fundAmount })
-    // You can add your API call or funding logic here
     handleClose()
   }
 
@@ -142,6 +38,93 @@ const Mobile = () => {
     console.log('Withdrawing:', { withdrawAmount, withdrawMethod })
     handleWithdrawClose()
   }
+
+  // Custom title component for Fund Account dialog
+  const FundAccountTitle = (
+    <>
+      <Typography sx={{
+        fontSize: '20px',
+        fontWeight: 700,
+        color: '#ffffff',
+        marginBottom: '8px',
+      }}>
+        Fund Your Account
+      </Typography>
+      
+      <Typography sx={{
+        fontSize: '12px',
+        color: '#ffffff',
+        lineHeight: 1.4,
+      }}>
+        Amount funded into your account will be added directly from connected wallet
+      </Typography>
+    </>
+  )
+
+  // Fund Account dialog content
+  const FundAccountContent = (
+    <div style={{ display: 'flex', flexDirection: 'column'}}>
+      
+      <div style={{width:'100%', height:'70px', gap: '8px', textAlign: 'center', marginTop: '20px'  }}>
+        <Typography  sx={{ color: '#ffffff', fontSize: '12px' }}>
+       Enter amount to add to your account     
+      </Typography>
+       <div style={{ display: 'flex', flexDirection: 'row', gap: '8px', justifyContent: 'center', marginTop: '8px' }}>
+      <Typography  sx={{ color: '#ffffff', fontSize: '24px', marginTop:'8px' }}>
+       $ 
+      </Typography>
+      <Typography sx={{ color: '#ffffff', fontSize: '36px' }}>
+       0.00
+      </Typography>
+      </div>
+      </div>
+     <div style={{ display: 'flex', flexDirection: 'row', gap: '8px', width:'100%',
+       marginTop:'60px', justifyContent:'space-between', alignItems: 'center' }}>
+        <Typography sx={{ color: '#ffffff', fontSize: '12px' }}>
+       Wallet Address: Asdhj6823hdjhdj
+      </Typography>
+      <Image
+       src='/Images/copy.svg'
+        alt='copy address image'
+       width='20'
+       height='20'
+       />
+     </div>
+    </div>
+  )
+
+  // Withdraw Fund dialog content
+  const WithdrawFundContent = (
+    <div style={{ display: 'flex', flexDirection: 'column', width:'100%', gap: '24px', marginTop:'15px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Typography sx={{ color: '#ffffff', fontSize: '12px' }}>
+          Amount to Withdraw
+        </Typography>
+        <StyledTextField
+          type="number"
+          fullWidth
+          value={withdrawAmount}
+          onChange={(e) => setWithdrawAmount(e.target.value)}
+          placeholder="0.00"
+          InputProps={{
+            startAdornment: <Typography sx={{ color: '#B6B6B6', mr: 1 }}>$</Typography>,
+          }}
+        />
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Typography sx={{ color: '#ffffff', fontSize: '12px' }}>
+          Withdraw Destination (USDT Wallet)
+        </Typography>
+        <StyledTextField
+          type="text"
+          fullWidth
+          value={withdrawMethod}
+          onChange={(e) => setWithdrawMethod(e.target.value)}
+          placeholder="Asd7383ndjhdj"
+        />
+      </div>
+    </div>
+  )
 
   return (
     <div className='flex flex-col md:hidden relative pb-20'>
@@ -364,207 +347,46 @@ const Mobile = () => {
                     </div>           
 
         {/* Fund Account Dialog */}
-        <BootstrapDialog
-          onClose={handleClose}
-          aria-labelledby="fund-account-dialog-title"
+        <ReusableDialog
           open={open}
-          maxWidth="sm"
-          fullWidth
+          onClose={handleClose}
+          buttonText="Fund Account"
+          onSubmit={handleFundAccount}
+          customTitleComponent={FundAccountTitle}
+          buttonProps={{
+            width: '100%',
+            minHeight:'52px',
+            margin:'0 8px 16px 8px',
+          }}
         >
-         <DialogTitle sx={{ m: 0, p: 0 }} id="fund-account-dialog-title">
-          <div style={{
-            width: '100%',           
-            height: '85px',          
-            padding: '16px',       
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-          }}>
-            
-            {/* Main Title */}
-            <Typography sx={{
-              fontSize: '20px',
-              fontWeight: 700,
-              color: '#ffffff',
-              marginBottom: '8px',
-            }}>
-              Fund Your Account
-            </Typography>
-            
-            {/* Subtitle */}
-            <Typography sx={{
-              fontSize: '12px',
-              color: '#ffffff',
-              lineHeight: 1.4,
-            }}>
-              Amount funded into your account will be added directly from connected wallet
-            </Typography>
-            
-          </div>
-        </DialogTitle>
-          <IconButton
-            aria-label="close"
-            onClick={handleClose}
-            sx={{
-              position: 'absolute',
-              right: 8,
-              top: 8,
-              color: '#B6B6B6',
-              '&:hover': {
-                backgroundColor: '#2a2a2a',
-              },
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-          <DialogContent>
-            <div style={{ display: 'flex', flexDirection: 'column'}}>
-              
-              <div style={{width:'100%', height:'70px', gap: '8px', textAlign: 'center', marginTop: '20px'  }}>
-                <Typography  sx={{ color: '#ffffff', fontSize: '12px' }}>
-               Enter amount to add to your account     
-              </Typography>
-               <div style={{ display: 'flex', flexDirection: 'row', gap: '8px', justifyContent: 'center', marginTop: '8px' }}>
-              <Typography  sx={{ color: '#ffffff', fontSize: '24px', marginTop:'8px' }}>
-               $ 
-              </Typography>
-              <Typography sx={{ color: '#ffffff', fontSize: '36px' }}>
-               0.00
-              </Typography>
-              </div>
-              </div>
-             <div style={{ display: 'flex', flexDirection: 'row', gap: '8px', width:'100%',
-               marginTop:'60px', justifyContent:'space-between', alignItems: 'center' }}>
-                <Typography sx={{ color: '#ffffff', fontSize: '12px' }}>
-               Wallet Address: Asdhj6823hdjhdj
-              </Typography>
-              <Image
-               src='/Images/copy.svg'
-                alt='copy address image'
-               width='20'
-               height='20'
-               />
-             </div>
-            </div>
-          </DialogContent>
-          
-          <DialogActions>
-            <StyledButton 
-              onClick={handleFundAccount}
-              sx={{
-                width: '100%',
-                minHeight:'52px',
-                margin:'0 16px 16px 16px'
-              }}
-            >
-              Fund Account
-            </StyledButton>
-          </DialogActions>
-        </BootstrapDialog>
+          {FundAccountContent}
+        </ReusableDialog>
 
         {/* Withdraw Fund Dialog */}
-        <BootstrapDialog
-          onClose={handleWithdrawClose}
-          aria-labelledby="withdraw-dialog-title"
+        <ReusableDialog
           open={withdrawOpen}
-          maxWidth="sm"
+          onClose={handleWithdrawClose}
+          title="Withdraw Funds"
+          subtitle="Employee salaries will be sent out on the scheduled date and time"
+          buttonText="Withdraw Funds"
+          onSubmit={handleWithdraw}
+          buttonProps={{
+            width: '100%',
+            minHeight:'52px',
+            margin:'0 8px 16px 8px',
+          }}
+          titleStyle={{
+            '& .MuiTypography-root:first-of-type': {
+              fontSize: '20px',
+            },
+            '& .MuiTypography-root:last-of-type': {
+              fontSize: '12px',
+              width: '280px',
+            }
+          }}
         >
-          <DialogTitle sx={{ m: 0, p: 0 }} id="withdraw-dialog-title">
-            <div style={{
-              width: '100%',           
-              height: '85px',          
-              padding: '16px',       
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'flex-start',
-            }}>
-              
-              {/* Main Title */}
-              <Typography sx={{
-                fontSize: '20px',
-                fontWeight: 700,
-                color: '#ffffff',
-                marginBottom: '8px',
-              }}>
-                Withdraw Funds
-              </Typography>
-              
-              {/* Subtitle */}
-              <Typography sx={{
-                fontSize: '12px',
-                color: '#ffffff',
-                lineHeight: 1.4,
-                width: '280px',
-              }}>
-                Employee salaries will be sent out on the scheduled date and time
-              </Typography>
-              
-            </div>
-          </DialogTitle>
-          
-          <IconButton
-            aria-label="close"
-            onClick={handleWithdrawClose}
-            sx={{
-              position: 'absolute',
-              right: 8,
-              top: 8,
-              color: '#B6B6B6',
-              '&:hover': { backgroundColor: '#2a2a2a' },
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-          
-          <DialogContent>
-            <div style={{ display: 'flex', flexDirection: 'column', width:'100%', gap: '24px', marginTop:'25px' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <Typography sx={{ color: '#ffffff', fontSize: '12px' }}>
-                  Amount to Withdraw
-                </Typography>
-                <StyledTextField
-                  type="number"
-                  fullWidth
-                  value={withdrawAmount}
-                  onChange={(e) => setWithdrawAmount(e.target.value)}
-                  placeholder="0.00"
-                  InputProps={{
-                    startAdornment: <Typography sx={{ color: '#B6B6B6', mr: 1 }}>$</Typography>,
-                  }}
-                />
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <Typography sx={{ color: '#ffffff', fontSize: '12px' }}>
-                  Withdraw Destination (USDT Wallet)
-                </Typography>
-                <StyledTextField
-                  type="text"
-                  fullWidth
-                  value={withdrawMethod}
-                  onChange={(e) => setWithdrawMethod(e.target.value)}
-                  placeholder="Asd7383ndjhdj"
-                />
-              </div>
-            </div>
-          </DialogContent>
-          
-          <DialogActions>
-            <StyledButton 
-              onClick={handleWithdraw}
-              sx={{ 
-                width: '100%',
-                minHeight:'52px',
-                margin:'0 16px 16px 16px',
-                backgroundColor: '#63D9B9',
-                '&:hover': { backgroundColor: '#52c7a5' }
-              }}
-            >
-              Withdraw Funds
-            </StyledButton>
-          </DialogActions>
-        </BootstrapDialog>
+          {WithdrawFundContent}
+        </ReusableDialog>
 
     </div>
   )

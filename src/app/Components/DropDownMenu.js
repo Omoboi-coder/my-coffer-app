@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import { Button, Menu, MenuItem } from '@mui/material';
+import { px } from 'framer-motion';
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -18,12 +19,12 @@ const StyledMenu = styled((props) => (
 ))(({ theme }) => ({
   '& .MuiPaper-root': {
     backgroundColor: '#282828 !important',
-    borderRadius: 6,
+    borderRadius: '2px',
     marginTop: theme.spacing(1),
-    minWidth: 180,
+    minWidth: '50px',
     color: 'rgb(55, 65, 81)',
     '& .MuiMenu-list': {
-      padding: '4px 0',
+      padding: '0px 0',
     },
     '& .MuiMenuItem-root': {
       '& .MuiSvgIcon-root': {

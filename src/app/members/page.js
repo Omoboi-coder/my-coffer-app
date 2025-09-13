@@ -1,8 +1,220 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import DashboardLayout from '../Components/DashboardLayout'
+import ReusableDialog, { StyledTextField } from '../Components/ReusableDialog'
+import { Typography } from '@mui/material'
+import Link from 'next/link'
 
 const Members = () => {
+  // Dialog state management
+  const [open, setOpen] = useState(false)
+  const [openSecond, setOpenSecond] = useState(false)
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    walletAddress: '',
+    position: '',
+    salary: ''
+  })
+  
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
+  const handleOpenSecond = () => setOpenSecond(true)
+  const handleCloseSecond = () => setOpenSecond(false)
+  
+  const handleSubmit = () => {
+    handleClose()
+    handleOpenSecond() 
+  }
+
+  const handleFinalSubmit = () => {
+    console.log('Adding member:', formData)
+    handleCloseSecond()
+    // Reset form
+    setFormData({
+      fullName: '',
+      email: '',
+      walletAddress: '',
+      position: '',
+      salary: ''
+    })
+  }
+
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }))
+  }
+
+  // Replace your existing dialogConfig with this mobile-responsive version
+
+const dialogConfig = {
+  titleStyle: {
+    fontSize: { xs: '20px', md: '28px' },
+    height: { xs: 'auto', md: '110px' },
+    paddingLeft: { xs: '25px !important', md: '35px !important' },
+    paddingRight: { xs: '0', md: '0' },
+    '& .MuiTypography-subtitle1': {
+      minWidth: { xs: '303px', md: '303px' },
+      fontSize: { xs: '14px', md: '14px' },
+       lineHeight: { xs: 1.4, md: 1.5 }, 
+    }
+  },
+  contentStyle: {
+    minWidth: { xs: '280px', md: '458px' },
+    minHeight: { xs: 'auto', md: '254px' },
+    padding: { xs: '8px', md: '0 5px'  },
+    maxWidth: { xs: '100%', md: 'none' },
+  },
+  buttonStyle: {
+    minWidth: { xs: 'calc(100% - 32px)', md: '470px' },
+    maxWidth: { xs: '100%', md: '470px' },
+    minHeight: '48px',
+    margin: { xs: '0 16px 16px 16px', md: '0 15px auto 15px' },
+    marginBottom: { xs: '16px', md: '10px' },
+    display: 'block',
+    width: { xs: 'auto', md: 'auto' },
+  }
+}
+
+// Also update your FirstDialogContent with better mobile styling
+const FirstDialogContent = (
+  <div style={{
+    display:'flex', 
+    flexDirection:'column', 
+    gap:'16px',
+    marginTop:'10px', 
+    marginRight:'10px',
+    marginLeft:'10px',
+    width: { xs:'254px', md:'458px'},
+  }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px'}}>
+      <Typography sx={{ 
+        color: '#B6B6B6', 
+        fontSize: { xs: '11px', md: '12px' }
+      }}>
+        Full Name
+      </Typography>
+      <StyledTextField
+        type="text"
+        value={formData.fullName}
+        onChange={(e) => handleInputChange('fullName', e.target.value)}
+        placeholder="Enter full name"
+        style={{ width: '100%'}}
+        sx={{
+          '& .MuiOutlinedInput-root': {
+            height: { xs: '44px', md: '48px' },
+            fontSize: { xs: '14px', md: '16px' }
+          }
+        }}
+      />
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px'}}>
+      <Typography sx={{ 
+        color: '#B6B6B6', 
+        fontSize: { xs: '11px', md: '12px' }
+      }}>
+        Email Address
+      </Typography>
+      <StyledTextField
+        type="email"
+        value={formData.email}
+        onChange={(e) => handleInputChange('email', e.target.value)}
+        placeholder="Abc123@gmail.com"
+        style={{ width: '100%' }}
+        sx={{
+          '& .MuiOutlinedInput-root': {
+            height: { xs: '44px', md: '48px' },
+            fontSize: { xs: '14px', md: '16px' }
+          }
+        }}
+      />
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px'}}>
+      <Typography sx={{ 
+        color: '#B6B6B6', 
+        fontSize: { xs: '11px', md: '12px' }
+      }}>
+        Wallet Address
+      </Typography>
+      <StyledTextField
+        type="text"
+        value={formData.walletAddress}
+        onChange={(e) => handleInputChange('walletAddress', e.target.value)}
+        placeholder="Asd7383ndjhdj"
+        style={{ width: '100%' }}
+        sx={{
+          '& .MuiOutlinedInput-root': {
+            height: { xs: '44px', md: '48px' },
+            fontSize: { xs: '14px', md: '16px' }
+          }
+        }}
+      />
+    </div>
+  </div>
+)
+
+// And update your SecondDialogContent similarly
+const SecondDialogContent = (
+  <div style={{
+    display:'flex', 
+    flexDirection:'column', 
+    gap:'16px',
+    marginTop:'10px', 
+    marginLeft:'10px', 
+    marginRight:'10px',
+  }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+      <Typography sx={{ 
+        color: '#B6B6B6', 
+        fontSize: { xs: '11px', md: '12px' }
+      }}>
+        Position
+      </Typography>
+      <StyledTextField
+        type="text"
+        value={formData.position}
+        onChange={(e) => handleInputChange('position', e.target.value)}
+        placeholder="Enter position"
+        sx={{
+          '& .MuiOutlinedInput-root': {
+            height: { xs: '44px', md: '48px' },
+            fontSize: { xs: '14px', md: '16px' }
+          }
+        }}
+      />
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+      <Typography sx={{ 
+        color: '#B6B6B6', 
+        fontSize: { xs: '11px', md: '12px' }
+      }}>
+        Salary
+      </Typography>
+      <StyledTextField
+        type="number"
+        value={formData.salary}
+        onChange={(e) => handleInputChange('salary', e.target.value)}
+        placeholder="100"
+        InputProps={{
+          startAdornment: <Typography sx={{ color: '#B6B6B6', mr: 1 }}>$</Typography>,
+        }}
+        sx={{
+          '& .MuiOutlinedInput-root': {
+            height: { xs: '44px', md: '48px' },
+            fontSize: { xs: '14px', md: '16px' }
+          }
+        }}
+      />
+    </div>
+  </div>
+)
+  
   return (
     <DashboardLayout>
         <section className='flex flex-col md:flex-wrap 2xl:mx-auto relative 
@@ -53,14 +265,16 @@ const Members = () => {
             </div>
           </div>
           {/* button 1 */}
+          <Link href="/attendance">
           <button className='w-[196px] md:w-[188px] h-[52px] rounded-[8px] gap-[10px] text-center
            absolute top-[40rem] text-[#63D9B9] border border-[#63D9B9] left-30 md:left-[39rem] md:absolute
            md:top-46 py-[14px] px-[28px] md:px-[26px]'>
             <span>View Attendance</span>
           </button>
+          </Link>
           {/* button 2 */}
           <button className='w-[196px] md:w-[195px] h-[52px] rounded-[8px] gap-[10px] text-center absolute top-[40rem]
-           left-30 md:left-[52rem] md:absolute md:top-46 py-[14px] px-[28px] md:px-[48px] bg-[#63D9B9]'>
+           left-30 md:left-[52rem] md:absolute md:top-46 py-[14px] px-[28px] md:px-[48px] bg-[#63D9B9] cursor-pointer' onClick={handleOpen}>
             <span>Add Member</span>
           </button>
           {/* mobile schedule div */}
@@ -159,7 +373,7 @@ const Members = () => {
             {/* item 1 */}
             <div className='flex flex-row md:gap-[24px] text-[24px]'>
               <p>Salary</p>
-             </div>
+            </div>
              {/* item 2 */}
              <div className='flex flex-row md:w-[125px] md:h-[24px] md:gap-[62px] text-[16px]'>
               <p>$876</p>
@@ -173,6 +387,36 @@ const Members = () => {
              </div>
           </div>
         </section>
+
+        {/* First Dialog - Personal Information */}
+        <ReusableDialog
+          open={open}
+          onClose={handleClose}
+          title="Add Member"
+          subtitle="Members added can be scheduled to get their salary paid on a set date and time"
+          buttonText="Next Step"
+          onSubmit={handleSubmit}
+          titleStyle={dialogConfig.titleStyle}
+          contentStyle={dialogConfig.contentStyle}
+          buttonStyle={dialogConfig.buttonStyle}
+        >
+          {FirstDialogContent}
+        </ReusableDialog>
+
+        {/* Second Dialog - Job Information */}
+        <ReusableDialog
+          open={openSecond}
+          onClose={handleCloseSecond}
+          title="Add Member"
+          subtitle="Members added can be scheduled to get their salary paid on a set date and time"
+          buttonText="Add Member"
+          onSubmit={handleFinalSubmit}
+         titleStyle={dialogConfig.titleStyle}
+         contentStyle={dialogConfig.contentStyle}
+         buttonStyle={dialogConfig.buttonStyle}
+        >
+          {SecondDialogContent}
+        </ReusableDialog>
     </DashboardLayout>
   )
 }
