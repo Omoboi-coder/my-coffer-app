@@ -17,7 +17,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     backgroundColor: '#1a1a1a',
     color: '#ffffff',
     fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
-    borderTop: 'none !important',
+    borderTop: 'none ',
     [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(2),
     },
@@ -39,7 +39,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
     [theme.breakpoints.down('sm')]: {
       minWidth: '300px',
-      minHeight: '400px',
+      minHeight: 'auto',
       margin: '16px',
       width: 'calc(100% - 32px)',
       maxWidth: '400px',
@@ -133,7 +133,8 @@ const ReusableDialog = ({
   buttonProps = {},
   titleStyle = {},
   contentStyle = {},   
-  buttonStyle = {},    // Added default empty object
+  buttonStyle = {},   
+  paperStyle = {},
   customTitleComponent = null,
 }) => {
   return (
@@ -141,6 +142,11 @@ const ReusableDialog = ({
       onClose={onClose}
       open={open}
       maxWidth="sm"
+       sx={{
+        '& .MuiPaper-root': {
+          ...paperStyle // This will override the default styles
+        }
+      }}
     >
       <DialogTitle sx={{ pl: 5, ...titleStyle }}>
         {customTitleComponent ? (
@@ -187,8 +193,8 @@ const ReusableDialog = ({
           onClick={onSubmit}
           sx={{ 
             // Default button styles
-            minWidth: { xs: '365px', sm: '458px' },
-            maxWidth: { xs: '320px', sm: 'none' },
+            minWidth: { xs: '350px', sm: '458px' },
+            maxWidth: { xs: '350px', sm: 'none' },
             minHeight: '52px',
             border: '8px',
             margin: { xs: '0 auto 16px auto', sm: 'auto' },

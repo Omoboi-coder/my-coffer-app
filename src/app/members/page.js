@@ -222,13 +222,13 @@ const SecondDialogContent = (
         <div className='hidden md:flex flex-col md:w-[198px] md:h-[112px] gap-[24px] mt-8'>
             <div className='flex flex-row h-[36px] gap-1'>
             <Image
-            src="Images/FourthCanvas - jpeg 0.svg"
+            src="/Images/FourthCanvas - jpeg 0.svg"
             alt='Canvas Logo'
             width={36}
             height={36}
             />
             <Image
-            src="Images/FourthCanvas - png 0.svg"
+            src="/Images/FourthCanvas - png 0.svg"
             alt='FourthCanvas'
             width={145}
             height={36}

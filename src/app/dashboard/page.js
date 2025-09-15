@@ -49,7 +49,9 @@ const Dashboard = () => {
       fontSize: '24px',
       fontWeight: 700,
       color: '#ffffff',
+      width: '230px',
       marginBottom: '8px',
+      marginLeft: '10px',
     }}>
       Fund Your Account
     </Typography>
@@ -59,6 +61,7 @@ const Dashboard = () => {
       color: '#ffffff',
       lineHeight: 1.4,
       width: '300px',
+      marginLeft: '10px',
     }}>
       Amount funded into your account will be added directly from connected wallet
     </Typography>

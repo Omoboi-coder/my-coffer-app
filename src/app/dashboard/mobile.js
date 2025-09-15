@@ -55,6 +55,7 @@ const Mobile = () => {
         fontSize: '12px',
         color: '#ffffff',
         lineHeight: 1.4,
+        width: '280px',
       }}>
         Amount funded into your account will be added directly from connected wallet
       </Typography>
@@ -354,10 +355,13 @@ const Mobile = () => {
           onSubmit={handleFundAccount}
           customTitleComponent={FundAccountTitle}
           buttonProps={{
-            width: '100%',
-            minHeight:'52px',
-            margin:'0 8px 16px 8px',
-          }}
+                  sx: {
+                  minWidth: '320px !important', 
+                  maxWidth: '340px !important', 
+                  minHeight:'52px',
+                  margin:'0 auto 16px auto',
+  }
+}}
         >
           {FundAccountContent}
         </ReusableDialog>
@@ -373,7 +377,7 @@ const Mobile = () => {
           buttonProps={{
             width: '100%',
             minHeight:'52px',
-            margin:'0 8px 16px 8px',
+            margin:'0 auto 16px auto',
           }}
           titleStyle={{
             '& .MuiTypography-root:first-of-type': {
@@ -382,6 +386,7 @@ const Mobile = () => {
             '& .MuiTypography-root:last-of-type': {
               fontSize: '12px',
               width: '280px',
+              lineHeight: 1.4,
             }
           }}
         >
