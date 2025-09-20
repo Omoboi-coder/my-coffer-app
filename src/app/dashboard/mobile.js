@@ -89,6 +89,7 @@ const Mobile = () => {
         alt='copy address image'
        width='20'
        height='20'
+       className='w-[20px] h-[20px] '
        />
      </div>
     </div>
@@ -148,14 +149,14 @@ const Mobile = () => {
                         alt=''
                         width={30}
                         height={30}
-                        className='absolute top-0 left-[170px]'
+                        className='absolute top-0 left-[170px] w-[30px] h-[30px]'
                         />
                          <Image
                         src="/Images/Ellipse 45.svg"
                         alt=''
                         width={21}
                         height={21}
-                        className='absolute top-[85px] left-[180px]'
+                        className='absolute top-[85px] left-[180px] w-[21px] h-[21px]'
                         />
                   </div>
                   {/* image 2 */}
@@ -229,7 +230,7 @@ const Mobile = () => {
                       alt=''
                       width={24}
                       height={24}
-                      className=''
+                      className='w-[24px] h-[24px]'
                       />
                       <p className='mt-0.5'>Account Funded</p>
                   </div>  
@@ -242,7 +243,7 @@ const Mobile = () => {
                       alt=''
                       width={24}
                       height={24}
-                      className=''
+                      className='w-[24px] h-[24px]'
                       />
                 </div>
                   {/* item 2 */}
@@ -255,7 +256,7 @@ const Mobile = () => {
                       alt=''
                       width={24}
                       height={24}
-                      className=''
+                      className='w-[24px] h-[24px]'
                       />
                       <p className='mt-0.5'>Account Funded</p>
                   </div>  
@@ -268,7 +269,7 @@ const Mobile = () => {
                       alt=''
                       width={24}
                       height={24}
-                      className=''
+                      className='w-[24px] h-[24px]'
                       />
                 </div>
                  {/* item 3 */}
@@ -281,7 +282,7 @@ const Mobile = () => {
                       alt=''
                       width={24}
                       height={24}
-                      className=''
+                      className='w-[24px] h-[24px]'
                       />
                       <p className='mt-0.5'>Account Funded</p>
                   </div>  
@@ -294,7 +295,7 @@ const Mobile = () => {
                       alt=''
                       width={24}
                       height={24}
-                      className=''
+                      className='w-[24px] h-[24px]'
                       />
                 </div>
               </div>
@@ -313,7 +314,7 @@ const Mobile = () => {
                               alt=''
                               width={34}
                               height={24}
-                              className=''
+                              className='w-[34px] h-[24px]'
                               />
                             <h2 className='text-[16px] mt-1'>Fund Account</h2>
                           </div>
@@ -331,7 +332,7 @@ const Mobile = () => {
                               alt=''
                               width={34}
                               height={24}
-                              className=''
+                              className='w-[34px] h-[24px]'
                               />
                             <h2 className='text-[16px] mt-1'>Withdraw Fund</h2>
                           </div>

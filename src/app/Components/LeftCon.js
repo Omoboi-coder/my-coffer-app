@@ -96,7 +96,7 @@ const LeftCon = () => {
                          width={24}
                          height={24}
                          />
-                         <Link href="/profile" className='text-[16px] text-white mt-1.5 cursor-pointer'>profile</Link>
+                         <div className='text-[16px] text-white mt-1.5 cursor-pointer'>profile</div>
                       </div>
                        {/* notification */}
                       <div className='flex flex-row gap-2 w-[133px] h-[32px]'>
@@ -106,7 +106,7 @@ const LeftCon = () => {
                          width={24}
                          height={24}
                          />
-                         <Link href="/notification" className='text-[16px] text-white mt-1.5 cursor-pointer'>Notification</Link>
+                         <div className='text-[16px] text-white mt-1.5 cursor-pointer'>Notification</div>
                       </div>
                        {/* settings */}
                       <div className='flex flex-row gap-2 w-[133px] h-[32px]'>
@@ -116,7 +116,7 @@ const LeftCon = () => {
                          width={24}
                          height={24}
                          />
-                         <Link href="/settings" className='text-[16px] text-white mt-1.5 cursor-pointer'>settings</Link>
+                         <div className='text-[16px] text-white mt-1.5 cursor-pointer'>settings</div>
                       </div>
                     </div>
                   </div>
@@ -125,9 +125,10 @@ const LeftCon = () => {
                     <p className=' text-[14px] text-white opacity-85'>Attendance Link</p>
                     <Image
                     src="/Images/copy.svg"
-                    alt=''
+                    alt='copy address image'
                     width="16"
                     height="16"
+                    className='w-[16px] h-[16px] cursor-pointer'
                     />
                   </div>
                   {/* address */}

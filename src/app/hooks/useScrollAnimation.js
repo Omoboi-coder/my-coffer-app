@@ -3,19 +3,26 @@ import { useEffect, useRef, useState } from 'react'
 export const useScrollAnimation = (options = {}) => {
   const ref = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+  
+  // Only run after client hydration
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
   
   useEffect(() => {
+    if (!isClient) return // Don't run on server or before hydration
+    
     const element = ref.current
     if (!element) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // This makes it animate every time it enters/leaves viewport
         setIsVisible(entry.isIntersecting)
       },
       {
-        threshold: 0.1, // Trigger when 10% visible
-        rootMargin: '-50px 0px', // Start animation 50px before element is visible
+        threshold: 0.1,
+        rootMargin: '-50px 0px',
         ...options
       }
     )
@@ -25,7 +32,8 @@ export const useScrollAnimation = (options = {}) => {
     return () => {
       if (element) observer.unobserve(element)
     }
-  }, [options])
+  }, [isClient, options]) // Add isClient as dependency
 
-  return [ref, isVisible]
+  // Return false until client is ready
+  return [ref, isClient && isVisible]
 }

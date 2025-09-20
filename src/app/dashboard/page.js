@@ -95,6 +95,7 @@ const Dashboard = () => {
             alt='copy address image'
             width='24'
             height='24'
+            className='w-[24px] h-[24px] '
           />
         </Typography>   
       </div>
@@ -158,6 +159,7 @@ const Dashboard = () => {
         alt=''
         width={12}
         height={12}
+        className='w-[12px] h-[12px]'
         />
         <p>search</p> 
         </div>

@@ -9,16 +9,23 @@ const Hero = () => {
   const [buttonRef, buttonVisible] = useScrollAnimation({ rootMargin: '-150px 0px' })
 
   return (
-    <section id='hero' className='bg-coffer-dark md:w-[1,728px] md:h-[770px] relative overflow-hidden'>
+    <section id='hero' className='bg-coffer-dark relative overflow-hidden'>
+      {/* flex container */}
+       {/*  container */}
+          <div className='flex flex-col mx-auto w-full h-full md:w-[1,728px] 2xl:max-w-[1728px] md:h-[770px]
+           items-center text-white relative z-10'
+           >
+
         {/* Custom background image overlay */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 z-0"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat
+           2xl:bg-contain 2xl:bg-no-repeat 2xl:bg-center opacity-50 z-0"
           style={{
             backgroundImage: "url('/Images/Group (2).svg')"
           }}
         />
         
-          {/* flex container */}
+          {/*  container */}
           <div ref={heroRef} className={`flex flex-col mx-auto w-[336px] h-[575px] md:w-[1062px] md:h-[648px] 
            gap-[30px] md:gap-[56px] items-center text-white mt-10 md:mt-15 z-50 transition-all duration-1000 ease-out
            ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -61,6 +68,7 @@ const Hero = () => {
               </button>
               </Link>
           </div>
+        </div>
     </section>
   )
 }

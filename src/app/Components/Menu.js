@@ -37,7 +37,7 @@ const Menu = () => {
         alt="Menu"
         width={24}
         height={24}
-        className="mt-1.5 cursor-pointer"
+        className="mt-1.5 w-[24px] h-[24px] cursor-pointer"
         onClick={toggleMenu}
       />
       
@@ -143,7 +143,12 @@ const Menu = () => {
       ${openMenu ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
     >
       <p className=" text-[14px] text-white opacity-85">Attendance Link</p>
-      <Image src="/Images/copy.svg" alt="" width="16" height="16" />
+      <Image src="/Images/copy.svg" 
+      alt=""
+       width="16" 
+       height="16"
+      className='w-[16px] h-[16px]' 
+      />
     </div>
   </div>
 </div>

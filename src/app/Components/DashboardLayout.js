@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import LeftCon from './LeftCon'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -8,6 +8,11 @@ import { usePathname } from 'next/navigation'
 
 const DashboardLayout = ({ children }) => {
   const pathname = usePathname()
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const navItems = [
     {
@@ -47,33 +52,28 @@ const DashboardLayout = ({ children }) => {
       {/* Mobile navbar - only shows on small screens */}
       <nav className='md:hidden bg-growtoken-dark'>
         <div className='flex px-5 pt-5 pb-6 justify-between'>
-          {/* nav Logo */}
           <Link href="/">
           <div className="flex">
             <Image
               src="/Images/Logo+Name.svg"
               alt="Logo"
-              width={30}
-              height={10}
+              width={170}
+              height={36}
               className="w-[170px] h-[36px] md:w-[227px] md:h-[48px]"
             />
           </div>
           </Link>
-          {/* Hamburger Menu */}
-            <Menu />
+          <Menu />
         </div>
       </nav>
 
-      {/* Main content area */}
       <div className='flex flex-col md:flex-row 2xl:mx-auto w-full h-full flex-1
        gap-5 md:w-[1350px] md:h-[1000px] bg-coffer-dark overflow-hidden'>
         
-        {/* LeftCon - only shows on desktop */}
         <div className='md:block hidden'>
           <LeftCon />
         </div>
 
-        {/* Right side content - with bottom padding on mobile for nav */}
         <div className='flex-1 md:flex-1 w-full h-full overflow-y-auto'>
           {children}
         </div>
@@ -83,7 +83,8 @@ const DashboardLayout = ({ children }) => {
       <nav className='md:hidden fixed bottom-0 left-0 right-0 bg-[#282828] z-50'>
         <div className='flex justify-around items-center py-2'>
           {navItems.map((item) => {
-            const isActive = pathname === item.href
+            // Only check for active state after client hydration
+            const isActive = isClient && pathname === item.href
             
             return (
               <Link 
