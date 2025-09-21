@@ -36,7 +36,7 @@ const Expertise = () => {
                   Our Expertise
                 </h3>
                 
-                <h2 className={`text-[40px] leading-12 md:leading-16 mt-5 md:text-[58px] 2xl:text-[72px] w-[362px] h-[144px]
+                <h2 className={`text-[40px] leading-12 md:leading-20 mt-5 md:text-[58px] 2xl:text-[72px] w-[362px] h-[144px]
                  md:w-[631px] 2xl:w-[731px] md:h-[160px] transition-all duration-800 delay-400 ease-out
                  ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
                    Masters of Precision Payroll Processing
@@ -59,7 +59,7 @@ const Expertise = () => {
 
             {/* Animated Content Section */}
             <div className='flex flex-col relative w-[382px] h-[508px] md:w-[754px] md:h-[844px] 
-             gap-8 md:gap-8 mx-auto md:mx-0 md:ml-[5rem] mt-5 md:mt-[-4.5rem] text-white'>
+             gap-8 md:gap-8 mx-auto md:mx-0 md:ml-[3rem] 2xl:ml-[5rem] mt-5 md:mt-[-6rem] 2xl:mt-[-4.5rem] text-white'>
                 
                 {/* Animated Numbers Image */}
                 <Image

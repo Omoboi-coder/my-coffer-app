@@ -17,7 +17,7 @@ const Features = () => {
             
             {/* Background overlays remain the same */}
             <div 
-              className="absolute top-[40px] md:top-[10px] right-[20px] md:left-[65rem] 2xl:left-[85rem]
+              className="absolute top-[40px] md:top-[10px] right-[20px] md:left-[65rem] 2xl:left-[80rem]
                z-0 opacity-100 w-[120px] h-[116px] md:w-[279px] md:h-[269px]"
               style={{
                 backgroundImage: "url('/Images/LooperGroup.svg')",
@@ -27,8 +27,8 @@ const Features = () => {
               }}
             />
             <div 
-              className="absolute top-[888px] md:top-[350px] left-[20px] md:left-[50px]
-               2xl:left-[10rem] w-[120px] h-[128px] md:w-[245px] md:h-[262px]"
+              className="absolute top-[888px] md:top-[350px] left-[20px] md:left-[75px]
+               2xl:left-[8rem] w-[120px] h-[128px] md:w-[245px] md:h-[262px]"
               style={{
                 backgroundImage: "url('/Images/Group 9.svg')",
                 backgroundSize: 'contain',    
@@ -39,14 +39,14 @@ const Features = () => {
 
             {/* Animated Heading */}
             <h3 ref={headingRef} className={`w-fit md:w-[496px] text-[20px] md:text-[45px] h-[52px] mt-10 md:mt-10 ml-6
-             md:ml-5 2xl:ml-22 transition-all duration-800 ease-out
+             md:ml-[3rem] 2xl:ml-22 transition-all duration-800 ease-out
              ${headingVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
                How Payclick Works
             </h3>   
 
             {/* Features Grid */}
-            <div className='flex flex-col md:flex-row w-[382px] h-[848px] md:w-[1305px] 2xl:w-[1528px] md:h-[360px]
-             min-[414px]:ml-4 min-[430px]:ml-6 2xl:mx-auto md:mx-4 gap-4 md:gap-3
+            <div className='flex flex-col md:flex-row w-[382px] h-[848px] md:w-[1275px] 2xl:w-[1528px] md:h-[360px]
+             min-[414px]:ml-4 min-[430px]:ml-6 md:ml-[3rem] 2xl:ml-[5rem] md:mx-4 gap-4 md:gap-3
             mt-8 md:mt-25 opacity-80'>
 
             {/* Animated Box 1 */}

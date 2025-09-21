@@ -186,7 +186,7 @@ const FirstDialogContent = (
   return (
     <DashboardLayout>
        <section className='flex flex-col md:flex-wrap 2xl:mx-auto relative 
-        pb-[40rem] md:pb-0 w-full h-full md:h-[1000px]'>
+        pb-[4rem] md:pb-0 w-full h-full md:h-[1000px]'>
         <div className='hidden md:flex flex-col md:w-[198px] md:h-[112px] gap-[24px] mt-8'>
                     <div className='flex flex-row h-[36px] gap-1'>
                     <Image
@@ -220,9 +220,9 @@ const FirstDialogContent = (
                               </div>
                           </div>
       {/* Back Button */}
-      <Link href="/schedule" className='mt-10 w-max'>
+      <Link href="/schedule" className='mt-10 w-max h-max'>
       <button 
-        className="flex items-center gap-2 ursor-pointer text-white text-[16px] md:text-[36px]"
+        className="flex items-center gap-2 cursor-pointer text-white text-[16px] md:text-[36px]"
       >
         <Image
           src="/Images/arrow-left.svg"

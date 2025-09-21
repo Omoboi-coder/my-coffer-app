@@ -9,11 +9,11 @@ const Navbar = () => {
       {/* Nav bar container */}
       <nav className='bg-coffer-dark md:w-[1,728px] relative overflow-hidden'>
         {/* Flex container */}
-        <div className="flex flex-row relative mx-auto w-full h-[48px] md:w-[1350px] xl:w-[1728px] 2xl:w-[1728px] justify-between 
-        pt-15 px-8 md:pt-20 md:px-30 2xl:px-35 items-end">
+        <div className="flex flex-row relative mx-auto w-full h-[48px] md:w-[1728px] 2xl:w-[1728px] justify-between 
+        pt-15 px-8 md:pt-20 md:px-15 2xl:px-35 items-end">
           
           {/* nav Logo */}
-          <div className="flex flex-row ">
+          <div className="flex flex-row">
             <Image
               src="/Images/Logo+Name.svg"
               alt="Logo"
@@ -32,11 +32,11 @@ const Navbar = () => {
          />
 
             {/* Navigation links (Desktop) */}
-            <div className="hidden md:flex text-white text-[16px] gap-[64px] md:mr-75 2xl:mr-20">
-              <Link href="/Payment" className=" hover:text-[#63D9B9]">Products</Link>
-              <Link href="/Expertise" className=" hover:text-[#63D9B9]">Ecosystem</Link>
-              <Link href="/Features" className=" hover:text-[#63D9B9]">Chainlink</Link>
-              <Link href="/AboutUs" className=" hover:text-[#63D9B9]">About Us</Link>
+            <div className="hidden md:flex text-white text-[16px] gap-[64px] md:mr-[25rem] 2xl:mr-20">
+              <Link href="#payment" className=" hover:text-[#63D9B9]">Products</Link>
+              <Link href="#expertise" className=" hover:text-[#63D9B9]">Ecosystem</Link>
+              <Link href="#features" className=" hover:text-[#63D9B9]">Chainlink</Link>
+              <Link href="#aboutus" className=" hover:text-[#63D9B9]">About Us</Link>
             </div>
     </div>
   </nav>

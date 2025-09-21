@@ -385,7 +385,8 @@ py-[8px] md:py-[12px] rounded-[8px] md:mt-10 mt-5 ml-[18.5rem] md:ml-0 border bo
           {/* button */}
           <div 
             className='w-[196px] md:w-[243px] h-[52px] rounded-[8px] gap-[10px] absolute top-[40rem]
-           left-30 md:left-[49rem] md:absolute md:top-46 py-[14px] px-[25px] md:px-[28px] text-center bg-[#63D9B9] cursor-pointer'
+           left-30 md:left-[49rem] md:absolute md:top-46 py-[14px] px-[25px] md:px-[28px] text-center 
+           text-[#010101] bg-[#63D9B9] cursor-pointer'
             onClick={handleOpen}
           >
             <span>Schedule Payment</span>

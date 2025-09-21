@@ -14,10 +14,10 @@ const Footer = () => {
         alt="Coffer Logo"   
         width={227}
         height={48}
-        className="md:w-[227px] md:h-[48px] mt-10 ml-14"
+        className="md:w-[227px] md:h-[48px] mt-10 ml-14 2xl:ml-20"
         />
         {/* input div */}
-        <div className='flex flex-col absolute top-32 left-14 w-[352px] h-[200px]
+        <div className='flex flex-col absolute top-32 left-14 2xl:left-20 w-[352px] h-[200px]
          md:w-[460px] md:h-[270px] space-y-13'>
            <div className='flex flex-col gap-4'>
             <h5 className='text-[16px] text-white shadow'>Stay updated with</h5>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         {/* Links */}
         <div className='flex flex-row md:w-[775px] md:h-[176px] gap-[35px] mt-2 
-        md:mt-10 ml-0 md:ml-[17rem] '>
+        md:mt-10 ml-0 md:ml-[17rem] 2xl:ml-[22rem] '>
             {/* col 1 */}
             <div className='flex flex-col md:w-[116px] md:h-[176px] gap-6 text-white'>
                 <h3 className='text-[32px]'>Explore</h3>
@@ -84,7 +84,7 @@ const Footer = () => {
 
         </div>
         {/* connect & social media*/}
-        <div className='flex flex-row absolute top-[22.3rem] left-[34.7rem] w-[240px] h-[24px] text-white gap-6'>
+        <div className='flex flex-row absolute top-[22.3rem] left-[34.7rem] 2xl:left-[41rem] w-[240px] h-[24px] text-white gap-6'>
             <p>Connect with us</p>
         {/* social icons */}
             <div className='flex flex-row w-[80px] h-[16px] gap-4 mt-1'>
@@ -112,9 +112,9 @@ const Footer = () => {
             </div>
         </div>
         {/* footer */}
-        <div className='flex flex-row absolute bottom-1 h-[24px] md:w-[1350px] md:h-[40px] text-white text-[14px]
+        <div className='flex flex-row absolute bottom-1 h-[24px] md:w-[1350px] 2xl:w-[1728px] md:h-[40px] text-white text-[14px]
         md:text-[16px] gap-4 md:gap-16 border-1 border-t-[#4E4E4E] border-x-0 border-b-0'>
-            <p className='pt-2.5 ml-[3.5rem]'>&copy; Payclick 2025 All rights reserved.</p>
+            <p className='pt-2.5 ml-[3.5rem] 2xl:ml-[4.8rem]'>&copy; Payclick 2025 All rights reserved.</p>
             <p className='pt-2.5'>Privacy Policy</p>
             <p className='pt-2.5'>Payclick for Companies</p>
         </div>

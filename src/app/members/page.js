@@ -273,7 +273,7 @@ const SecondDialogContent = (
           </button>
           </Link>
           {/* button 2 */}
-          <button className='w-[196px] md:w-[195px] h-[52px] rounded-[8px] gap-[10px] text-center absolute top-[40rem]
+          <button className='w-[196px] md:w-[195px] h-[52px] rounded-[8px] gap-[10px] text-center text-[#010101]  absolute top-[40rem]
            left-30 md:left-[52rem] md:absolute md:top-46 py-[14px] px-[28px] md:px-[48px] bg-[#63D9B9] cursor-pointer' onClick={handleOpen}>
             <span>Add Member</span>
           </button>

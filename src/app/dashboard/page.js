@@ -159,7 +159,7 @@ const Dashboard = () => {
         alt=''
         width={12}
         height={12}
-        className='w-[12px] h-[12px]'
+        className='w-[12px] h-[12px] mt-1'
         />
         <p>search</p> 
         </div>

@@ -24,7 +24,7 @@ const AboutUs = () => {
             />
             
             {/* Animated Text Section */}
-            <div ref={textRef} className={`flex flex-col mx-auto md:mx-15 2xl:mx-25 w-[385px]
+            <div ref={textRef} className={`flex flex-col mx-auto md:mx-15 2xl:mx-20 w-[385px]
              h-[552px] md:w-[500px] 2xl:w-[731px] md:h-[496px] 2xl:h-[625px] mt-12 md:mt-[4rem] gap-8 md:gap-9
             transition-all duration-1000 ease-out
             ${textVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
@@ -39,7 +39,7 @@ const AboutUs = () => {
                   Pioneering Precision in Salary Management
                 </h2>
                 
-                <p className={`text-[16px] md:text-[17px] 2xl:text-[24px] w-[382px] h-[168px] md:w-[425px] 2xl:w-[659px] md:h-[152px] 2xl:h-[220px]
+                <p className={`text-[16px] md:text-[17px] 2xl:text-[24px] w-[382px] h-[168px] md:w-[468px] 2xl:w-[659px] md:h-[152px] 2xl:h-[220px]
                 transition-all duration-700 delay-600 ease-out
                 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                     Welcome to Payclick, where we redefine the landscape of financial efficiency with a focus

@@ -95,7 +95,7 @@ const Menu = () => {
       >
         <Image src="/Images/profile-circle.svg" alt="Logo" width={24} height={24} />
         <Link
-          href="/profile"
+          href="#"
           className="text-[16px] text-white cursor-pointer"
           onClick={handleLinkClick}
         >
@@ -111,7 +111,7 @@ const Menu = () => {
       >
         <Image src="/Images/notification-bing.svg" alt="Logo" width={24} height={24} />
         <Link
-          href="/notification"
+          href="#"
           className="text-[16px] text-white cursor-pointer"
           onClick={handleLinkClick}
         >
@@ -127,7 +127,7 @@ const Menu = () => {
       >
         <Image src="/Images/setting-2.svg" alt="Logo" width={24} height={24} />
         <Link
-          href="/settings"
+          href="#"
           className="text-[16px] text-white cursor-pointer"
           onClick={handleLinkClick}
         >

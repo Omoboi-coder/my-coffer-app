@@ -23,18 +23,18 @@ const ContactUs = () => {
   return (
     <section id='contact' className='bg-coffer-dark overflow-hidden'>
       {/* flex container */}
-      <div className='flex flex-col md:flex-row mx-auto w-[430px] h-[680px] md:w-[1728px] md:h-[694px]
-      text-white relative z-10'>
+      <div className='flex flex-col md:flex-row mx-auto w-[430px] h-[680px] md:w-[1728px] md:h-[624px]
+      2xl:h-[840px] text-white relative z-10'>
         
         {/* Background image remains the same */}
-        <div className="hidden md:flex absolute z-0 opacity-50 md:right-[22%] 2xl:right-[12%]
-        w-[74%] 2xl:w-[87%] h-[120%] pointer-events-none"
+        <div className="hidden md:flex absolute z-0 opacity-50 md:right-[24%] 2xl:right-0
+        md:w-[75%] 2xl:w-[97%] h-[120%]"
           style={{
             backgroundImage: "url('/Images/Box_Alternating 1.svg')",
             backgroundSize: 'cover',    
             backgroundRepeat: 'no-repeat',   
             backgroundPosition: 'center',                                        
-            top: '-2%'                           
+            top: '-6%'                           
           }}
         />
 
@@ -84,22 +84,22 @@ const ContactUs = () => {
         />
 
         {/* Animated Desktop Version */}
-        <div ref={desktopRef} className={`hidden md:flex flex-col w-[352px] h-[380px] md:w-[570px] md:h-[384px] md:gap-7 
-        mt-2 md:mt-[20rem] md:ml-[3.5rem] z-10 transition-all duration-1000 ease-out
+        <div ref={desktopRef} className={`hidden md:flex flex-col w-[352px] h-[380px] md:w-[570px] 2xl:w-[731px] md:h-[384px] md:gap-[40px]
+         2xl:gap-[50px] mt-2 md:mt-[15rem] 2xl:mt-[23rem] md:ml-[3.5rem] 2xl:ml-[5rem] z-10 transition-all duration-1000 ease-out
         ${desktopVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
           
-          <h3 className={`md:text-[30px] transition-all duration-600 delay-200 ease-out
+          <h3 className={`md:text-[30px] 2xl:text-[45px] w-fit transition-all duration-600 delay-200 ease-out
           ${desktopVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             Contact
           </h3>
           
-          <div className='flex flex-col gap-4'>
-              <h2 className={`text-[58px] w-[570px] h-[80px] transition-all duration-800 delay-400 ease-out
+          <div className='flex flex-col gap-6'>
+              <h2 className={`text-[58px] 2xl:text-[72px] md:w-[570px] 2xl:w-[731px] h-[80px] transition-all duration-800 delay-400 ease-out
               ${desktopVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
                 Get in touch with us
               </h2>
               
-              <p className={`w-[505px] h-[64px] text-[20px] transition-all duration-700 delay-600 ease-out
+              <p className={`md:w-[505px] 2xl:w-[659px] h-[64px] text-[20px] 2xl:text-[24px] transition-all duration-700 delay-600 ease-out
               ${desktopVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                 Have questions or need assistance?
                 Reach out to our dedicated support team
