@@ -137,7 +137,7 @@ const Dashboard = () => {
 
   return (
     <DashboardLayout>
-      <section className='flex flex-col md:flex-wrap 2xl:mx-auto w-full h-full
+      <section className='flex flex-col md:flex-wrap w-full h-full
        md:max-w-[1096px] md:h-[1000px] relative'>
          {/* Logo & dashboard */}
         <div className='hidden flex-col md:flex md:w-[235px] md:h-[112px] text-white md:text-[45px] md:mt-4 space-y-5'>

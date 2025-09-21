@@ -68,7 +68,7 @@ const DashboardLayout = ({ children }) => {
       </nav>
 
       <div className='flex flex-col md:flex-row 2xl:mx-auto w-full h-full flex-1
-       gap-5 md:w-[1350px] md:h-[1000px] bg-coffer-dark overflow-hidden'>
+       gap-5 2xl:gap-10 md:w-[1350px] 2xl:w-[1400px] md:h-[1000px] bg-coffer-dark overflow-hidden'>
         
         <div className='md:block hidden'>
           <LeftCon />

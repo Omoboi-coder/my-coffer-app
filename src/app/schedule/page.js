@@ -347,7 +347,7 @@ const Schedule = () => {
           </div>
           
           {/* sort div */}
-<div className=' flex flex-row w-[104px] h-[40px] md:w-[182px] md:h-[48px] px-[8px] md:px-[45px]
+<div className=' flex flex-row w-[104px] h-[40px] md:w-[182px] md:h-[48px] px-[8px] md:px-[45px] 2xl:px-[40px]
 py-[8px] md:py-[12px] rounded-[8px] md:mt-10 mt-5 ml-[18.5rem] md:ml-0 border border-[#D9D9D9]
  cursor-pointer' 
  onClick={(e) => {
